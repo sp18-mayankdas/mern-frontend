@@ -190,3 +190,74 @@ HSLA COLOR: hsla(9, 100%, 64%, 0.5)
 
 - WE CAN SET THE TEXT COLOR , BACKGROUND COLOR , BORDER COLOR .
 
+# JavaScript
+
+- toString does not take any arguments and if we try to console log toString() method, we get ==> [object Undefined]
+
+- Arrays are a special type of objects and internally the elements of arrays gets stored as a key value pair , similar manner to the objects.
+
+- typeof(array) ==> returns an object.
+
+- Arrays variables can be objects. because arrays are special type of objects, we can have objects in an array , functions in an array , and also arrays in an array.
+
+**_Array Methods_**
+
+# pop()
+
+    - removes the last element from an array.
+    - Returns the value that's popped out.
+
+# push()
+
+    - Need to have a  value to be pushed
+    - adds a new element to an array at the end.
+    - And , returns the new array length.
+
+# shift()
+
+    - Removes the first array element and shifts all other elements to a lower index.
+    - Returns the value that was shifted out.
+
+# Unshift()
+
+    - Adds a new element to an array at beginning and unshifts older elements.
+    - Returns new array length.
+
+# Slice(start , ending)
+
+    - The start and ending positions are optional.
+    - It slices out a piece of an array into a new array.
+    - Creates a new array.
+    - Does not remove any elements from source array (or Original array).
+    - whatever index you give , it slices out a part of an array starting from array element at that index position.
+    - If we put starting as well as the last position,
+
+```
+    array.slice(2,4)
+```
+
+    - from 2nd position till this position (ie., 4) excluding this index
+
+    - Start position => Inclusive
+    - Last Value => Exclusive
+
+# Splice(starting index , DeleteCounts , ...items)
+
+    - Used to add new items to an array
+    - StartPositions:  tells from which index or from which position we need position we need to delete the elements.
+    - DeleteCounts: how many elements can we delete
+    - ...items: dd elements into the array at that position.
+
+```
+const array = [10,20,30,40,50];
+
+array.splice(3 , 1 , 80 , "90" , true);
+
+```
+
+    - means at 3rd index , remove 1 element and at that position add 80 , "90" and true.
+
+    - Output array: [10 , 20 , 30 , 80 , "90" , true];
+    - Splice method returns the deleted element.
+    - And , Splice method modifies or operates on original array.
+    
