@@ -192,6 +192,8 @@ HSLA COLOR: hsla(9, 100%, 64%, 0.5)
 
 # JavaScript
 
+**_ Array _**
+
 - toString does not take any arguments and if we try to console log toString() method, we get ==> [object Undefined]
 
 - Arrays are a special type of objects and internally the elements of arrays gets stored as a key value pair , similar manner to the objects.
@@ -260,4 +262,48 @@ array.splice(3 , 1 , 80 , "90" , true);
     - Output array: [10 , 20 , 30 , 80 , "90" , true];
     - Splice method returns the deleted element.
     - And , Splice method modifies or operates on original array.
-    
+
+# Objects
+
+    - Objects are non-primitive datatypes and also known as reference types.
+    - Objects are a collection of key-value pairs.
+    - Objects are of three types:
+        - Object Literal
+        - functions
+        - Arrays
+    - If we have 2 objects having same data, they will not be equal to each other coz they are stored in different memory locations.
+    ```
+    const obj1 = {name: "John", age: 30};
+    const obj2 = {name: "John", age: 30};
+    ```
+    - So , console.log(obj1 === obj2) will return false because the objects are reference types and we dont compare the value , we compare the address.
+
+    - But if we have 2 objects having same reference, they will be equal to each other coz they are stored in same memory locations.
+
+    - So , console.log(obj1 === obj2) will return true , for
+    ```
+    const obj1 = {name: "John", age: 30};
+    const obj2 = obj1;
+    ```
+    - In this case , we directly assigned obj1 to obj2, so both are pointing to same memory location.so eve if we will make any changes in obj2, it will also reflect in obj1.
+
+    - To access the prperties of an object, we can use either dot notation or bracket notation.
+    - Dot notation: obj1.name
+    - Bracket notation: obj1["name"] ==> keys of objects are always strings internally, so we can use bracket notation to access the properties of an object.
+    - If we have any space or any special character in the key, we have to use bracket notation to access the property of an object , and the keys must be written in strings inside brackets.
+    - If we try to access the property which is not in the object, it will return undefined.
+    - We can write any valid javascript expression and variables inside the brackets to access the property of an object.
+    ```
+    const myName = 'mayank';
+    const obj1 = {name: "John", age: 30, 'mayank':"developer"};
+    console.log(obj1[myName]); // will return "developer" coz myName is a variable and it has the value "mayank" which is a key in the object obj1.
+    ```
+
+    - We can also write expressions like this:
+    ```
+    const obj1 = {fullName: "John"};
+    console.log(obj1["full" + "Name"]); // will return "John"
+
+    ```
+
+    - We can add or update any values inside objects
