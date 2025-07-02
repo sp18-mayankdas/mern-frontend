@@ -20,6 +20,8 @@ console.log(user === user2); //==> False
 
 
 
+
+
 //<======================== Objects inside objects ===========================>
 
 /*
@@ -160,9 +162,196 @@ console.log(user.toString())
 // console.log(new Object(1))
 
 
-const obj = {
-    a: 1,
-    b: 2,
-    a: 3,
+// const obj = {
+//     a: 1,
+//     b: 2,
+//     a: 3,
+// }
+// console.log(obj);
+
+//<================ length of array =================>
+/*
+function calculateLength(myObj) {
+    let key, length = 0;
+
+    for (key in myObj) {
+        if (myObj.hasOwnProperty(key)) {
+            length++;
+        }
+    }
+    return length;
 }
-console.log(obj);
+
+const user = {
+    a: "21",
+    b: "22",
+    3: 23,
+    c:"34"
+}
+
+const user2 = {
+    1: "a",
+    2: "b",
+    3: "c"
+}
+
+let length = calculateLength(user2)
+
+console.log(user,"\n", user2)
+console.log(length)
+*/
+
+//<==================== mutability in objects =======================>
+
+/*
+
+const x = {
+    name: 'mayank',
+    age: 22,
+    email: "mayank@gooogle.com",
+    address: {
+        city: "delhi",
+        pinCode: 110046,
+        moreDetails: {
+            population: 20093809,
+            district: {
+                Court: "nangal raya",
+            }
+        }
+    }
+}
+
+
+//Shallow Copy
+const y = { ...x };
+// const y = x;
+
+
+console.log(x)
+console.log(y)
+
+y.address.moreDetails.population = 23;
+y.address.city = "mumbai";
+y.age = 20;
+
+
+console.log(x)
+console.log(y)
+
+*/
+
+
+//<=================Deleting Properties==================>
+
+/*
+const user = {
+    name: 'mayank',
+    age: 22,
+    rollNumber: 89
+}
+
+delete user.age;
+
+console.log(user)
+*/
+
+//<============================== Displaying objects =====================>
+
+/*
+const user = {
+    name: 'mayank',
+    age: 21,
+    rollno: 89
+}
+// let text = "";
+
+for (let key in user) {
+    console.log(user[key]);
+
+}
+
+*/
+
+//<===================== Object constructor functions ==============>
+
+/*
+function Person(name, age, rollNo) {
+    this.name = name;
+    this.age = age;
+    this.rollNo = rollNo;
+}
+
+const studentOne = new Person("akash", 23, 78);
+
+console.log(Person);
+console.log(studentOne.age);
+*/
+
+//<======================== Prototype =======================>
+/*
+function Person(name, age, roll) {
+    this.name = name;
+    this.age = age;
+    this.roll = roll;
+}
+
+Person.location = "delhi";
+Person.prototype.location = "mumbai";
+
+const student = new Person("akash", 22, 67);
+console.log(Person.location);
+console.log(student.location);
+*/
+
+//<==================== Seal vs Freeze ==================>
+
+/*
+const user = {
+    name: "mayank",
+    age:22,
+    roll: 89,
+    location:{
+        city:"Delhi"
+    }
+}
+
+// Object.freeze(user)
+Object.seal(user)
+
+user.age = 34;
+user.location.city= "mumbai"
+
+console.log(user)
+
+*/
+
+const library = [
+    {
+        author: 'Bill Gates',
+        title: 'The Road Ahead',
+        readingStatus: true
+    },
+    {
+        author: 'Steve Jobs',
+        title: 'Walter Isaacson',
+        readingStatus: true
+    },
+    {
+        author: 'Suzanne Collins',
+        title: 'Mockingjay: The Final Book of The Hunger Games',
+        readingStatus: false
+    }];
+
+// console.log(library[0].readingStatus)
+// console.log(library[1].readingStatus)
+// console.log(library[2].readingStatus)
+
+library.forEach((element) => {
+    // console.log("Reading Status of " + element.title + " is " + element.readingStatus)
+    if (element.readingStatus) {
+        console.log("Already Read " + element.title);
+    }
+    else {
+        console.log("Still need to read " + element.title)
+    }
+});
