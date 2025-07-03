@@ -94,16 +94,19 @@ console.log(Object.prototype.hasOwnProperty("z"));
 // for (const k in o) console.log(k);
 */
 
-const user = {
-    a: "apple",
-    b: "boy"
+const arr = []
+arr[0] = 'a';
+arr[2] = 'v'
+
+for (let i = 0; i < arr.length; i++) {
+    console.log(i, arr[i]) // 0 a , 1 undefined ,  2 v
 }
 
-const user2 = {
-    a: "aam",
-    b: "bat"
+for (let i in arr) {
+    console.log(i, arr[i]) // 0 a , 2 v
 }
 
-user[user2] = "raj"
+for (i of arr) {
+    console.log(i)  //a , undefined ,   v
 
-console.log(user[user2])
+}
