@@ -351,7 +351,7 @@ for (let i = 0, len = car.length, text = ""; i < len; i++) {
 
 ```javascript
 for (let i = 0; i < 5; i++) {
-  console.log(i); // Outputs: 0, 1, 2, 3, 4
+  console.log(i) // Outputs: 0, 1, 2, 3, 4
 }
 ```
 
@@ -363,9 +363,9 @@ for (let i = 0; i < 5; i++) {
 **Example**: Iterating an array:
 
 ```javascript
-const arr = ["a", "b", "c"];
+const arr = ["a", "b", "c"]
 for (let i = 0; i < arr.length; i++) {
-  console.log(arr[i]); // Outputs: a, b, c
+  console.log(arr[i]) // Outputs: a, b, c
 }
 ```
 
@@ -400,9 +400,9 @@ for (let key in object) {
 ### Example
 
 ```javascript
-const obj = { a: 1, b: 2, c: 3 };
+const obj = { a: 1, b: 2, c: 3 }
 for (let key in obj) {
-  console.log(key, obj[key]); // Outputs: a 1, b 2, c 3
+  console.log(key, obj[key]) // Outputs: a 1, b 2, c 3
 }
 ```
 
@@ -414,12 +414,12 @@ for (let key in obj) {
 **Example**: Summing object values:
 
 ```javascript
-const obj = { a: 10, b: 20, c: 30 };
-let sum = 0;
+const obj = { a: 10, b: 20, c: 30 }
+let sum = 0
 for (let key in obj) {
-  sum += obj[key];
+  sum += obj[key]
 }
-console.log(sum); // Outputs: 60
+console.log(sum) // Outputs: 60
 ```
 
 ### When to Use
@@ -430,10 +430,10 @@ console.log(sum); // Outputs: 60
 
 - **Avoid for Arrays**: Iterates over enumerable properties, not just indices, and order isn’t guaranteed.
   ```javascript
-  const arr = [1, 2, 3];
-  arr.custom = "test";
+  const arr = [1, 2, 3]
+  arr.custom = "test"
   for (let i in arr) {
-    console.log(i); // Outputs: 0, 1, 2, custom
+    console.log(i) // Outputs: 0, 1, 2, custom
   }
   ```
 
@@ -443,7 +443,7 @@ console.log(sum); // Outputs: 60
   ```javascript
   for (let key in obj) {
     if (obj.hasOwnProperty(key)) {
-      console.log(key, obj[key]);
+      console.log(key, obj[key])
     }
   }
   ```
@@ -469,9 +469,9 @@ for (let value of iterable) {
 ### Example
 
 ```javascript
-const arr = ["x", "y", "z"];
+const arr = ["x", "y", "z"]
 for (let value of arr) {
-  console.log(value); // Outputs: x, y, z
+  console.log(value) // Outputs: x, y, z
 }
 ```
 
@@ -484,7 +484,7 @@ for (let value of arr) {
 
 ```javascript
 for (let char of "hello") {
-  console.log(char); // Outputs: h, e, l, l, o
+  console.log(char) // Outputs: h, e, l, l, o
 }
 ```
 
@@ -497,10 +497,10 @@ for (let char of "hello") {
 
 - Not for plain objects (use `for...in` or `Object.keys/values/entries` with `for...of`).
   ```javascript
-  const obj = { a: 1, b: 2 };
+  const obj = { a: 1, b: 2 }
   for (let value of obj) {
     // Error: obj is not iterable
-    console.log(value);
+    console.log(value)
   }
   ```
 
@@ -509,7 +509,7 @@ for (let char of "hello") {
 - Use with `entries()` for indices:
   ```javascript
   for (let [index, value] of arr.entries()) {
-    console.log(`${index}: ${value}`);
+    console.log(`${index}: ${value}`)
   }
   ```
 
@@ -528,16 +528,16 @@ The `forEach` method is a functional approach to iterating over arrays, executin
 ```javascript
 array.forEach((element, index, array) => {
   // Code to execute
-});
+})
 ```
 
 ### Example
 
 ```javascript
-const arr = ["a", "b", "c"];
+const arr = ["a", "b", "c"]
 arr.forEach((value, index) => {
-  console.log(`${index}: ${value}`); // Outputs: 0: a, 1: b, 2: c
-});
+  console.log(`${index}: ${value}`) // Outputs: 0: a, 1: b, 2: c
+})
 ```
 
 ### Use Cases
@@ -559,9 +559,9 @@ arr.forEach((value, index) => {
 
 ```javascript
 arr.forEach((value) => {
-  if (value === "b") return; // Acts like continue
-  console.log(value); // Outputs: a, c
-});
+  if (value === "b") return // Acts like continue
+  console.log(value) // Outputs: a, c
+})
 ```
 
 **Question**: Why can’t `break` be used in `forEach`? How would you simulate it?
@@ -585,10 +585,10 @@ while (condition) {
 ### Example
 
 ```javascript
-let i = 0;
+let i = 0
 while (i < 5) {
-  console.log(i); // Outputs: 0, 1, 2, 3, 4
-  i++;
+  console.log(i) // Outputs: 0, 1, 2, 3, 4
+  i++
 }
 ```
 
@@ -600,9 +600,9 @@ while (i < 5) {
 **Example**: Processing a queue:
 
 ```javascript
-const queue = [1, 2, 3];
+const queue = [1, 2, 3]
 while (queue.length > 0) {
-  console.log(queue.shift()); // Outputs: 1, 2, 3
+  console.log(queue.shift()) // Outputs: 1, 2, 3
 }
 ```
 
@@ -631,17 +631,17 @@ The `do...while` loop executes the body at least once before checking the condit
 ```javascript
 do {
   // Code to execute
-} while (condition);
+} while (condition)
 ```
 
 ### Example
 
 ```javascript
-let i = 0;
+let i = 0
 do {
-  console.log(i); // Outputs: 0, 1, 2, 3, 4
-  i++;
-} while (i < 5);
+  console.log(i) // Outputs: 0, 1, 2, 3, 4
+  i++
+} while (i < 5)
 ```
 
 ### Use Cases
@@ -652,11 +652,11 @@ do {
 **Example**: Prompting until valid:
 
 ```javascript
-let input;
+let input
 do {
-  input = prompt("Enter a number:");
-} while (isNaN(input));
-console.log(Number(input));
+  input = prompt("Enter a number:")
+} while (isNaN(input))
+console.log(Number(input))
 ```
 
 ### When to Use
@@ -682,7 +682,7 @@ Nested loops involve one loop inside another, often used for multi-dimensional d
 ```javascript
 for (let i = 0; i < 2; i++) {
   for (let j = 0; j < 2; j++) {
-    console.log(i, j); // Outputs: 0 0, 0 1, 1 0, 1 1
+    console.log(i, j) // Outputs: 0 0, 0 1, 1 0, 1 1
   }
 }
 ```
@@ -714,8 +714,8 @@ for (let i = 0; i < 2; i++) {
 
 ```javascript
 for (let i = 0; i < 5; i++) {
-  if (i === 3) break;
-  console.log(i); // Outputs: 0, 1, 2
+  if (i === 3) break
+  console.log(i) // Outputs: 0, 1, 2
 }
 ```
 
@@ -723,8 +723,8 @@ for (let i = 0; i < 5; i++) {
 
 ```javascript
 for (let i = 0; i < 5; i++) {
-  if (i === 3) continue;
-  console.log(i); // Outputs: 0, 1, 2, 4
+  if (i === 3) continue
+  console.log(i) // Outputs: 0, 1, 2, 4
 }
 ```
 
@@ -735,8 +735,8 @@ Use labels to control outer loops:
 ```javascript
 outerLoop: for (let i = 0; i < 3; i++) {
   for (let j = 0; j < 3; j++) {
-    if (i === 1 && j === 1) break outerLoop;
-    console.log(i, j); // Outputs: 0 0, 0 1, 0 2, 1 0
+    if (i === 1 && j === 1) break outerLoop
+    console.log(i, j) // Outputs: 0 0, 0 1, 0 2, 1 0
   }
 }
 ```
@@ -761,14 +761,14 @@ outerLoop: for (let i = 0; i < 3; i++) {
 `break` prevents fall-through in `switch`:
 
 ```javascript
-let day = 1;
+let day = 1
 switch (day) {
   case 1:
-    console.log("Monday");
-    break;
+    console.log("Monday")
+    break
   case 2:
-    console.log("Tuesday");
-    break;
+    console.log("Tuesday")
+    break
 }
 ```
 
@@ -787,14 +787,14 @@ switch (day) {
 **Example**:
 
 ```javascript
-const arr = [1, 2, 3];
+const arr = [1, 2, 3]
 for (let i = 0; i < arr.length; i++) {
-  console.log(arr[i]); // Index-based
+  console.log(arr[i]) // Index-based
 }
 for (let value of arr) {
-  console.log(value); // Value-based
+  console.log(value) // Value-based
 }
-arr.forEach((value) => console.log(value)); // Functional
+arr.forEach((value) => console.log(value)) // Functional
 ```
 
 ### Objects
@@ -805,12 +805,12 @@ arr.forEach((value) => console.log(value)); // Functional
 **Example**:
 
 ```javascript
-const obj = { a: 1, b: 2 };
+const obj = { a: 1, b: 2 }
 for (let key in obj) {
-  console.log(key, obj[key]);
+  console.log(key, obj[key])
 }
 for (let value of Object.values(obj)) {
-  console.log(value); // Outputs: 1, 2
+  console.log(value) // Outputs: 1, 2
 }
 ```
 
@@ -822,9 +822,9 @@ for (let value of Object.values(obj)) {
 **Example**:
 
 ```javascript
-const keys = Object.keys(obj);
+const keys = Object.keys(obj)
 for (let i = 0; i < keys.length; i++) {
-  console.log(keys[i], obj[keys[i]]); // Cumbersome
+  console.log(keys[i], obj[keys[i]]) // Cumbersome
 }
 ```
 
@@ -853,9 +853,9 @@ for (let i = 0; i < keys.length; i++) {
    - Ensure condition updates (e.g., increment in `while`).
 
    ```javascript
-   let i = 0;
+   let i = 0
    while (i < 5) {
-     i++; // Prevent infinite loop
+     i++ // Prevent infinite loop
    }
    ```
 
@@ -864,7 +864,7 @@ for (let i = 0; i < keys.length; i++) {
    ```javascript
    for (let key in obj) {
      if (obj.hasOwnProperty(key)) {
-       console.log(key);
+       console.log(key)
      }
    }
    ```
@@ -877,7 +877,7 @@ for (let i = 0; i < keys.length; i++) {
    - Use `let` for block scoping in async loops:
      ```javascript
      for (let i = 0; i < 3; i++) {
-       setTimeout(() => console.log(i), 1000); // Outputs: 0, 1, 2
+       setTimeout(() => console.log(i), 1000) // Outputs: 0, 1, 2
      }
      ```
 
@@ -890,18 +890,18 @@ for (let i = 0; i < keys.length; i++) {
 1. **Infinite Loops**:
 
    ```javascript
-   let i = 0;
+   let i = 0
    while (i < 5) {
-     console.log(i); // Infinite if i++ is missing
+     console.log(i) // Infinite if i++ is missing
    }
    ```
 
 2. **Modifying Iterables**:
 
    ```javascript
-   let arr = [1, 2, 3];
+   let arr = [1, 2, 3]
    for (let i = 0; i < arr.length; i++) {
-     arr.push(4); // Infinite loop
+     arr.push(4) // Infinite loop
    }
    ```
 
@@ -909,7 +909,7 @@ for (let i = 0; i < keys.length; i++) {
 
    ```javascript
    for (var i = 0; i < 3; i++) {
-     setTimeout(() => console.log(i), 1000); // Outputs: 3, 3, 3
+     setTimeout(() => console.log(i), 1000) // Outputs: 3, 3, 3
    }
    ```
 
@@ -917,28 +917,28 @@ for (let i = 0; i < keys.length; i++) {
 
    ```javascript
    for (var i = 0; i < 3; i++) {
-     (function (i) {
-       setTimeout(() => console.log(i), 1000); // Outputs: 0, 1, 2
-     })(i);
+     ;(function (i) {
+       setTimeout(() => console.log(i), 1000) // Outputs: 0, 1, 2
+     })(i)
    }
    ```
 
 4. **Non-Enumerable Properties**:
 
    ```javascript
-   const obj = { a: 1 };
-   Object.defineProperty(obj, "b", { value: 2, enumerable: false });
+   const obj = { a: 1 }
+   Object.defineProperty(obj, "b", { value: 2, enumerable: false })
    for (let key in obj) {
-     console.log(key); // Outputs: a
+     console.log(key) // Outputs: a
    }
    ```
 
 5. **`break` in Labeled Blocks**:
    ```javascript
    myBlock: {
-     console.log("Start");
-     break myBlock;
-     console.log("End"); // Skipped
+     console.log("Start")
+     break myBlock
+     console.log("End") // Skipped
    }
    ```
 
@@ -952,7 +952,7 @@ for (let i = 0; i < keys.length; i++) {
 
    ```javascript
    for (var i = 0; i < 3; i++) {
-     setTimeout(() => console.log(i), 1000);
+     setTimeout(() => console.log(i), 1000)
    }
    ```
 
@@ -963,7 +963,7 @@ for (let i = 0; i < keys.length; i++) {
    ```javascript
    for (let i = 0; i < 2; i++) {
      for (let j = 0; j < 2; j++) {
-       console.log(i, j);
+       console.log(i, j)
      }
    }
    ```
@@ -973,10 +973,10 @@ for (let i = 0; i < keys.length; i++) {
 3. **What happens if you modify an array during iteration?**
 
    ```javascript
-   const arr = [1, 2, 3];
+   const arr = [1, 2, 3]
    for (let i = 0; i < arr.length; i++) {
-     arr.splice(i, 1);
-     console.log(arr[i]);
+     arr.splice(i, 1)
+     console.log(arr[i])
    }
    ```
 
@@ -987,8 +987,8 @@ for (let i = 0; i < keys.length; i++) {
    ```javascript
    outer: for (let i = 0; i < 2; i++) {
      for (let j = 0; j < 2; j++) {
-       if (j === 1) continue outer;
-       console.log(i, j);
+       if (j === 1) continue outer
+       console.log(i, j)
      }
    }
    ```
@@ -998,11 +998,11 @@ for (let i = 0; i < keys.length; i++) {
 5. **Can `break` be used in `forEach`?**
    _Answer_: No, causes `SyntaxError`. Use `some` or `for...of`:
    ```javascript
-   [1, 2, 3].some((num) => {
-     if (num === 2) return true;
-     console.log(num); // Outputs: 1
-     return false;
-   });
+   ;[1, 2, 3].some((num) => {
+     if (num === 2) return true
+     console.log(num) // Outputs: 1
+     return false
+   })
    ```
 
 **Question**: How do these tricky scenarios highlight the importance of scoping and control flow?
@@ -1010,3 +1010,59 @@ for (let i = 0; i < keys.length; i++) {
 ---
 
 **Question**: How will you apply these loop concepts in your next JavaScript project? What challenges do you anticipate?
+
+### Browser Object Model
+
+- Browser object model gives us the functions and properties using which we can manipulate our browser(like reload , resizing , redirecting or open url's , scrolling) using javascript.
+- BOM allows JS to `talk or interact to browser`.
+- Browser gives us the window object.
+- We can access all the methods and properties of window object without mentioning the window.
+
+## Properties of Window Object:
+
+- `window.innerWidth`: Returns the width of the browser window's viewport excluding the window's chrome (toolbars, scrollbars, etc.) .
+- `window.innerHeight`: Returns the height of the browser window's viewport excluding the window's chrome (toolbars, scrollbars, etc.) .
+- `window.outerWidth`: Returns the width of the browser window including the window's chrome (toolbars, scrollbars, etc.).
+- `window.outerHeight`: Returns the height of the browser window including the window's chrome.
+- `window.location`: The location object represents the URL of the current webpage and allows you to access or modify parts of the URL, like the hostname, pathname, or query string.
+  - `location.href`: Returns the full URL of the current page and takes you to that url.
+  - `location.reload()`: Reloads the current page.
+- `winow.history`: The history object manages the browser’s session history—the list of pages the user has visited in the current tab or window. Returns the history object of the browser window, which allows navigation through the user's browsing history.
+
+  - `history.back()`: Goes back to the previous page in the history.
+  - `history.forward()`: Goes forward to the next page in the history.
+  - `history.go(n)`: - Moves forward (positive n) or backward (negative n) in the history.
+    - `n`: The number of pages to move in the history. For example, `history.go(-1)` goes back one page, while `history.go(1)` goes forward one page.
+  - `history.go(0)`: Reloads the current page.
+
+- `window.open(url, name, features)`: Opens a new browser window or tab with the specified URL and returns reference to it. It opens the menitoned url in a new window or new tab
+
+  - `url`: The URL to load in the new window.
+  - `name`: The name of the new window or tab.
+  - `features`: A string specifying the features of the new window (e.g., size, position).
+
+- `window.close()`: Closes the current browser window or tab which was opened by `window.open()`. It cannot close the current window or tab if it was not opened by `window.open()`.
+
+- `window.resizeTo(width, height)`: Resizes the current browser window to the specified width and height.
+- `window.resizeBy(deltaWidth, deltaHeight)`: Changes the window size by a relative amount (increases or decreases width and height).
+
+```javascript
+window.resizeBy(100, 100) // Increases window size by 100x100 pixels
+window.resizeTo(500, 400) // Sets window size to 500x400 pixels
+```
+
+- `window.moveTo(x, y)`: Moves the current browser window to the specified coordinates on the screen.
+- `window.moveBy(deltaX, deltaY)`: Moves the current browser window by a relative amount (increases or decreases x and y coordinates).
+
+```javascript
+window.moveBy(50, 50) // Moves the window 50 pixels right and 50 pixels down
+window.moveTo(100, 100) // Moves the window to position (100, 100)
+```
+
+- `window.scrollTo(x, y)`: Scrolls the current page to the specified coordinates.
+- `scroll(x, y) or scrollTo(x, y)`: Scrolls the window to a specific position (x, y) in pixels from the top-left corner.
+- Both scroll and scrollTo behave the same in modern browsers, but scrollTo also supports additional options like smooth scrolling.
+
+```JavaScript
+
+```
