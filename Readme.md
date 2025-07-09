@@ -116,16 +116,16 @@ Chapter Summary:
 
 Formatting elements were designed to display special types of text:
 
-- <b> - Bold text
-- <strong> - Important text
-- <i> - Italic text
-- <em> - Emphasized text
-- <mark> - Marked text
-- <small> - Smaller text
-- <del> - Deleted text
-- <ins> - Inserted text
-- <sub> - Subscript text
-- <sup> - Superscript text
+- b tag - Bold text
+- strong tag - Important text
+- i tag - Italic text
+- em tag - Emphasized text
+- mark tag - Marked text
+- small tag - Smaller text
+- del tag - Deleted text
+- ins tag - Inserted text
+- sub tag - Subscript text
+- sup tag - Superscript text
 
 # Difference between Bold and Strong Tag?
 
@@ -139,17 +139,17 @@ Formatting elements were designed to display special types of text:
 
 # Html Quotations and Citation Elements
 
-Here , we will go through the <blockquote>, <q> , <abbr>, <addresss> , <cite> and <bdo> Html Elements.
+  - Here , we will go through the ```<blockquote>```, ```<q>``` , ```<abbr>```, ```<addresss>``` , ```<cite>``` and ```<bdo>``` Html Elements.
 
-BlockQuote: Defines a section that is quoted from another Source.
+  - BlockQuote: Defines a section that is quoted from another Source.
 
-- <blockquote> - So this elements defines a section that is quoted from another source. Browsers usually indent blockquote elements.
+- blockquote - So this elements defines a section that is quoted from another source. Browsers usually indent blockquote elements.
 
-- <q> - q defines a short quotation. It kinda adds apostrophe ..
+- q - q defines a short quotation. It kinda adds apostrophe ..
 
-- <abbr> - abbr tag defines an abbreviation or an acronym like HTML , CSS or like World health organisation for WHO.
+- abbr - abbr tag defines an abbreviation or an acronym like HTML , CSS or like World health organisation for WHO.
 
-- <address> - This tag defines the contact info , for the author or owner of a document or article. This contact info can be email , phone number , url , physical address , social media handle , etc. The text in the address usually returns in italic , and browsers will add a line break after and before the address element.
+- address - This tag defines the contact info , for the author or owner of a document or article. This contact info can be email , phone number , url , physical address , social media handle , etc. The text in the address usually returns in italic , and browsers will add a line break after and before the address element.
 
 # HTML COMMENTS
 
