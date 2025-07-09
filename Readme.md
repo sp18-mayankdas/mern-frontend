@@ -159,6 +159,8 @@ Syntax:
 
 <!-- Write your comments here -->
 
+# Day-02
+
 # HTML COLORS
 
 HTML colors are specified with predefined colors like rgb , rgba ,hsla , hsl , hex values.
@@ -187,6 +189,8 @@ HSLA COLOR: hsla(9, 100%, 64%, 0.5)
 
 - WE CAN SET THE TEXT COLOR , BACKGROUND COLOR , BORDER COLOR .
 
+# Day-03
+
 # JavaScript
 
 **_ Array _**
@@ -198,6 +202,8 @@ HSLA COLOR: hsla(9, 100%, 64%, 0.5)
 - typeof(array) ==> returns an object.
 
 - Arrays variables can be objects. because arrays are special type of objects, we can have objects in an array , functions in an array , and also arrays in an array.
+
+# Day-04
 
 **_Array Methods_**
 
@@ -261,6 +267,7 @@ array.splice(3 , 1 , 80 , "90" , true);
   - Splice method returns the deleted element.
   - And , Splice method modifies or operates on original array.
 
+# Day-05
 # Objects
 
   - Objects are non-primitive datatypes and also known as reference types.
@@ -305,6 +312,8 @@ array.splice(3 , 1 , 80 , "90" , true);
     ```
 
   - We can add or update any values inside objects
+
+# Day-06
 
 # JavaScript Loops
 
@@ -669,6 +678,8 @@ console.log(Number(input))
 
 ---
 
+# Day-07
+
 ## Nested Loops
 
 ### Overview
@@ -1003,11 +1014,7 @@ for (let i = 0; i < keys.length; i++) {
    })
    ```
 
-**Question**: How do these tricky scenarios highlight the importance of scoping and control flow?
-
----
-
-**Question**: How will you apply these loop concepts in your next JavaScript project? What challenges do you anticipate?
+# Day-08
 
 ### Browser Object Model
 
