@@ -1,60 +1,62 @@
 # Day-01
 
-What is HTML?
-HTML stands for Hyper Text Markup Language
-HTML is the standard markup language for creating Web pages
-HTML describes the structure of a Web page
-HTML consists of a series of elements
-HTML elements tell the browser how to display the content
-HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a link", etc.
+## What is HTML?
+
+- HTML stands for Hyper Text Markup Language
+- HTML is the standard markup language for creating Web pages
+- HTML describes the structure of a Web page
+- HTML consists of a series of elements
+- HTML elements tell the browser how to display the content
+- HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a link", etc.
 
 Explanation of whole HTML code:
 
-```
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <title>Page Title</title>
-    </head>
-    <body>
-        <h1>My First Heading</h1>
-        <p>My first paragraph.</p>
-    </body>
-    </html>
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page Title</title>
+  </head>
+  <body>
+    <h1>My First Heading</h1>
+    <p>My first paragraph.</p>
+  </body>
+</html>
 ```
 
 Explanation:
-The <!DOCTYPE html> declaration defines that this document is an HTML5 document
-The <html> element is the root element of an HTML page
-The <head> element contains meta information about the HTML page
-The <title> element specifies a title for the HTML page (which is shown in the browser's title bar or in the page's tab)
-The <body> element defines the document's body, and is a container for all the visible contents, such as headings, paragraphs, images, hyperlinks, tables, lists, etc.
-The <h1> element defines a large heading
-The <p> element defines a paragraph
 
-Who invented HTML?
-Tim Berners-Lee
+- The <!DOCTYPE html> declaration defines that this document is an HTML5 document
+- The <html> element is the root element of an HTML page
+- The <head> element contains meta information about the HTML page
+- The <title> element specifies a title for the HTML page (which is shown in the browser's title bar or in the page's tab)
+- The body element defines the document's body, and is a container for all the visible contents, such as headings, paragraphs, images, hyperlinks, tables, lists, etc.
+- The h1 element defines a large heading
+- The p element defines a paragraph
+
+- Who invented HTML? ==>Tim Berners-Lee
 
 # HTML Styles:
 
-    The HTML style attribute is used to add styles to an element, such as color, font, size, and more.
+- The HTML style attribute is used to add styles to an element, such as color, font, size, and more.
+
 
     Syntax:
         <tagname style="property:value;">
 
     Example:
 
-```
-        <h1 style="background-color: red;">My first heading</h1>
-        <p style="background-color: yellow; font-size: 40px;">My first paragraph</p>
+```html
+<h1 style="background-color: red;">My first heading</h1>
+<p style="background-color: yellow; font-size: 40px;">My first paragraph</p>
 ```
 
 ---
 
 # Text Color:
 
-```
-    <h1 style="color:red;">Text color</h1>
+```html
+<h1 style="color:red;">Text color</h1>
 ```
 
 ---
@@ -67,14 +69,14 @@ Fonts:
 
     Example:
 
-```
- <p style="font-family: Verdana, Geneva, Tahoma, sans-serif">
-      Font family: Verdana
-    </p>
+```html
+<p style="font-family: Verdana, Geneva, Tahoma, sans-serif">
+  Font family: Verdana
+</p>
 
-    <p style="font-family: 'Times New Roman', Times, serif">
-      Font family: Times New Roman
-    </p>
+<p style="font-family: 'Times New Roman', Times, serif">
+  Font family: Times New Roman
+</p>
 ```
 
 # Text-Size
@@ -83,7 +85,7 @@ Fonts:
 
     Example:
 
-    ```
+    ```html
     <p style="font-size:100px">Font Size: 30px</p>
     ```
 
@@ -93,7 +95,7 @@ Fonts:
 
     Example:
 
-    ```
+    ```html
     <p style="text-align: center">Text-Align: Center</p>
     ```
 
@@ -101,12 +103,12 @@ Fonts:
 
 Chapter Summary:
 
-    Use the style attribute for styling HTML elements
-    Use background-color for background color
-    Use color for text colors
-    Use font-family for text fonts
-    Use font-size for text sizes
-    Use text-align for text alignment
+  - Use the style attribute for styling HTML elements
+  - Use background-color for background color
+  - Use color for text colors
+  - Use font-family for text fonts
+  - Use font-size for text sizes
+  - Use text-align for text alignment
 
 ---
 
@@ -114,16 +116,16 @@ Chapter Summary:
 
 Formatting elements were designed to display special types of text:
 
-<b> - Bold text
-<strong> - Important text
-<i> - Italic text
-<em> - Emphasized text
-<mark> - Marked text
-<small> - Smaller text
-<del> - Deleted text
-<ins> - Inserted text
-<sub> - Subscript text
-<sup> - Superscript text
+- <b> - Bold text
+- <strong> - Important text
+- <i> - Italic text
+- <em> - Emphasized text
+- <mark> - Marked text
+- <small> - Smaller text
+- <del> - Deleted text
+- <ins> - Inserted text
+- <sub> - Subscript text
+- <sup> - Superscript text
 
 # Difference between Bold and Strong Tag?
 
@@ -141,18 +143,13 @@ Here , we will go through the <blockquote>, <q> , <abbr>, <addresss> , <cite> an
 
 BlockQuote: Defines a section that is quoted from another Source.
 
-<blockquote> - So this elements defines a section that is quoted from another source. 
-Browsers usually indent blockquote elements.
+- <blockquote> - So this elements defines a section that is quoted from another source. Browsers usually indent blockquote elements.
 
-<q> - q defines a short quotation. It kinda adds apostrophe ..
+- <q> - q defines a short quotation. It kinda adds apostrophe ..
 
-<abbr> - abbr tag defines an abbreviation or an acronym like HTML , CSS or like World health organisation for WHO.
+- <abbr> - abbr tag defines an abbreviation or an acronym like HTML , CSS or like World health organisation for WHO.
 
-<address> - This tag defines the contact info , for the author or owner of a document or article.
-
-This contact info can be email , phone number , url , physical address , social media handle , etc.
-
-The text in the address usually returns in italic , and browsers will add a line break after and before the address element.
+- <address> - This tag defines the contact info , for the author or owner of a document or article. This contact info can be email , phone number , url , physical address , social media handle , etc. The text in the address usually returns in italic , and browsers will add a line break after and before the address element.
 
 # HTML COMMENTS
 
@@ -222,91 +219,92 @@ HSLA COLOR: hsla(9, 100%, 64%, 0.5)
 
 # Unshift()
 
-    - Adds a new element to an array at beginning and unshifts older elements.
-    - Returns new array length.
+  - Adds a new element to an array at beginning and unshifts older elements.
+  - Returns new array length.
 
 # Slice(start , ending)
 
-    - The start and ending positions are optional.
-    - It slices out a piece of an array into a new array.
-    - Creates a new array.
-    - Does not remove any elements from source array (or Original array).
-    - whatever index you give , it slices out a part of an array starting from array element at that index position.
-    - If we put starting as well as the last position,
+  - The start and ending positions are optional.
+  - It slices out a piece of an array into a new array.
+  - Creates a new array.
+  - Does not remove any elements from source array (or Original array).
+  - whatever index you give , it slices out a part of an array starting from array element at that index position.
+  - If we put starting as well as the last position,
 
-```
+```javascript
     array.slice(2,4)
 ```
 
-    - from 2nd position till this position (ie., 4) excluding this index
+  - from 2nd position till this position (ie., 4) excluding this index
 
     - Start position => Inclusive
     - Last Value => Exclusive
 
 # Splice(starting index , DeleteCounts , ...items)
 
-    - Used to add new items to an array
-    - StartPositions:  tells from which index or from which position we need position we need to delete the elements.
-    - DeleteCounts: how many elements can we delete
-    - ...items: dd elements into the array at that position.
+  - Used to add new items to an array
+  - StartPositions:  tells from which index or from which position we need position we need to delete the elements.
+  - DeleteCounts: how many elements can we delete
+  - ...items: dd elements into the array at that position.
 
-```
+```javascript
+    // Example:
 const array = [10,20,30,40,50];
 
 array.splice(3 , 1 , 80 , "90" , true);
 
 ```
 
-    - means at 3rd index , remove 1 element and at that position add 80 , "90" and true.
+  - means at 3rd index , remove 1 element and at that position add 80 , "90" and true.
 
-    - Output array: [10 , 20 , 30 , 80 , "90" , true];
-    - Splice method returns the deleted element.
-    - And , Splice method modifies or operates on original array.
+  - Output array: [10 , 20 , 30 , 80 , "90" , true];
+  - Splice method returns the deleted element.
+  - And , Splice method modifies or operates on original array.
 
 # Objects
 
-    - Objects are non-primitive datatypes and also known as reference types.
-    - Objects are a collection of key-value pairs.
-    - Objects are of three types:
-        - Object Literal
-        - functions
-        - Arrays
-    - If we have 2 objects having same data, they will not be equal to each other coz they are stored in different memory locations.
-    ```
+  - Objects are non-primitive datatypes and also known as reference types.
+  - Objects are a collection of key-value pairs.
+  - Objects are of three types:
+    - Object Literal
+    - functions
+    - Arrays
+  - If we have 2 objects having same data, they will not be equal to each other coz they are stored in different memory locations.
+    ```javascript
     const obj1 = {name: "John", age: 30};
     const obj2 = {name: "John", age: 30};
     ```
-    - So , console.log(obj1 === obj2) will return false because the objects are reference types and we dont compare the value , we compare the address.
+  - So , console.log(obj1 === obj2) will return false because the objects are reference types and we dont compare the value , we compare the address.
 
-    - But if we have 2 objects having same reference, they will be equal to each other coz they are stored in same memory locations.
+  - But if we have 2 objects having same reference, they will be equal to each other coz they are stored in same memory locations.
 
-    - So , console.log(obj1 === obj2) will return true , for
-    ```
+  - So , console.log(obj1 === obj2) will return true , for
+    ```javascript
     const obj1 = {name: "John", age: 30};
     const obj2 = obj1;
     ```
-    - In this case , we directly assigned obj1 to obj2, so both are pointing to same memory location.so eve if we will make any changes in obj2, it will also reflect in obj1.
+  - In this case , we directly assigned obj1 to obj2, so both are pointing to same memory location.so eve if we will make any changes in obj2, it will also reflect in obj1.
 
-    - To access the prperties of an object, we can use either dot notation or bracket notation.
-    - Dot notation: obj1.name
-    - Bracket notation: obj1["name"] ==> keys of objects are always strings internally, so we can use bracket notation to access the properties of an object.
-    - If we have any space or any special character in the key, we have to use bracket notation to access the property of an object , and the keys must be written in strings inside brackets.
-    - If we try to access the property which is not in the object, it will return undefined.
-    - We can write any valid javascript expression and variables inside the brackets to access the property of an object.
-    ```
+  - To access the prperties of an object, we can use either dot notation or bracket notation.
+  - Dot notation: obj1.name
+  - Bracket notation: obj1["name"] ==> keys of objects are always strings internally, so we can use bracket notation to access the properties of an object.
+  - If we have any space or any special character in the key, we have to use bracket notation to access the property of an object , and the keys must be written in strings inside brackets.
+  - If we try to access the property which is not in the object, it will return undefined.
+  - We can write any valid javascript expression and variables inside the brackets to access the property of an object.
+    ```javascript
     const myName = 'mayank';
     const obj1 = {name: "John", age: 30, 'mayank':"developer"};
     console.log(obj1[myName]); // will return "developer" coz myName is a variable and it has the value "mayank" which is a key in the object obj1.
     ```
 
-    - We can also write expressions like this:
-    ```
+  - We can also write expressions like this:
+    ```javascript
     const obj1 = {fullName: "John"};
     console.log(obj1["full" + "Name"]); // will return "John"
 
     ```
 
-    - We can add or update any values inside objects
+  - We can add or update any values inside objects
 
 # JavaScript Loops
 
