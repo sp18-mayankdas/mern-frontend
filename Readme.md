@@ -26,13 +26,13 @@ Explanation of whole HTML code:
 
 Explanation:
 
-- The <!DOCTYPE html> declaration defines that this document is an HTML5 document
-- The <html> element is the root element of an HTML page
-- The <head> element contains meta information about the HTML page
-- The <title> element specifies a title for the HTML page (which is shown in the browser's title bar or in the page's tab)
-- The body element defines the document's body, and is a container for all the visible contents, such as headings, paragraphs, images, hyperlinks, tables, lists, etc.
-- The h1 element defines a large heading
-- The p element defines a paragraph
+- The ```<!DOCTYPE html>``` declaration defines that this document is an HTML5 document
+- The ```<html>``` element is the root element of an HTML page
+- The ```<head>``` element contains meta information about the HTML page
+- The ```<title>``` element specifies a title for the HTML page (which is shown in the browser's title bar or in the page's tab)
+- The ```<body>``` element defines the document's body, and is a container for all the visible contents, such as headings, paragraphs, images, hyperlinks, tables, lists, etc.
+- The ```<h1>``` element defines a large heading
+- The ```<p>``` element defines a paragraph
 
 - Who invented HTML? ==>Tim Berners-Lee
 
@@ -65,9 +65,9 @@ Fonts:
 
 # Font Family:
 
-    -The CSS font-family property defines the font to be used for an HTML element:
+  - The CSS font-family property defines the font to be used for an HTML element:
 
-    Example:
+  Example:
 
 ```html
 <p style="font-family: Verdana, Geneva, Tahoma, sans-serif">
@@ -81,9 +81,9 @@ Fonts:
 
 # Text-Size
 
-    The CSS font-size property defines the text size for an HTML element:
+  - The CSS font-size property defines the text size for an HTML element:
 
-    Example:
+  Example:
 
     ```html
     <p style="font-size:100px">Font Size: 30px</p>
@@ -91,9 +91,9 @@ Fonts:
 
 # Text-Alignment
 
-    The CSS text-align property defines the horizontal text alignment for an HTML element:
+  -  The CSS text-align property defines the horizontal text alignment for an HTML element:
 
-    Example:
+  Example:
 
     ```html
     <p style="text-align: center">Text-Align: Center</p>
@@ -116,26 +116,26 @@ Chapter Summary:
 
 Formatting elements were designed to display special types of text:
 
-- b tag - Bold text
-- strong tag - Important text
-- i tag - Italic text
-- em tag - Emphasized text
-- mark tag - Marked text
-- small tag - Smaller text
-- del tag - Deleted text
-- ins tag - Inserted text
-- sub tag - Subscript text
-- sup tag - Superscript text
+- ```<b>```  - Bold text
+- ```<strong>```  - Important text
+- ```<i>```  - Italic text
+- ```<em>```  - Emphasized text
+- ```<mark>```  - Marked text
+- ```<small>```  - Smaller text
+- ```<del>```  - Deleted text
+- ```<ins>```  - Inserted text
+- ```<sub>```  - Subscript text
+- ```<sup>```  - Superscript text
 
 # Difference between Bold and Strong Tag?
 
-    Both gives visual output same, but bold tag is a physical tag & strong tag is a logical tag.Basically when bold tag is used, it only makes the words thicker... But when strong tag is used, it makes the word thicker & also tells the Browser that the text inside "strong" tag is important. & as per the tag the words inside the strong tags are loaded first & accurate.
+  - Both gives visual output same, but bold tag is a physical tag & strong tag is a logical tag.Basically when bold tag is used, it only makes the words thicker... But when strong tag is used, it makes the word thicker & also tells the Browser that the text inside "strong" tag is important. & as per the tag the words inside the strong tags are loaded first & accurate.
 
 # Difference between <i> and <em> tag?
 
-    The <i> tag in HTML is used to display text in italics. It is generally used for stylistic purposes, such as denoting a different mood, voice, or foreign word, without adding any semantic emphasis to the content.
+  - The ```<i>``` tag in HTML is used to display text in italics. It is generally used for stylistic purposes, such as denoting a different mood, voice, or foreign word, without adding any semantic emphasis to the content.
 
-    The <em> tag in HTML is used to emphasize text, typically displayed in italics. It conveys semantic meaning, indicating that the emphasized text is important, which can also aid accessibility tools like screen readers in highlighting key content.
+  - The ```<em>``` tag in HTML is used to emphasize text, typically displayed in italics. It conveys semantic meaning, indicating that the emphasized text is important, which can also aid accessibility tools like screen readers in highlighting key content.
 
 # Html Quotations and Citation Elements
 
@@ -143,13 +143,13 @@ Formatting elements were designed to display special types of text:
 
   - BlockQuote: Defines a section that is quoted from another Source.
 
-- blockquote - So this elements defines a section that is quoted from another source. Browsers usually indent blockquote elements.
+- ```<blockquote>``` - So this elements defines a section that is quoted from another source. Browsers usually indent blockquote elements.
 
-- q - q defines a short quotation. It kinda adds apostrophe ..
+- ```<q>``` - q defines a short quotation. It kinda adds apostrophe ..
 
-- abbr - abbr tag defines an abbreviation or an acronym like HTML , CSS or like World health organisation for WHO.
+- ```<abbr>``` - abbr tag defines an abbreviation or an acronym like HTML , CSS or like World health organisation for WHO.
 
-- address - This tag defines the contact info , for the author or owner of a document or article. This contact info can be email , phone number , url , physical address , social media handle , etc. The text in the address usually returns in italic , and browsers will add a line break after and before the address element.
+- ```<address>``` - This tag defines the contact info , for the author or owner of a document or article. This contact info can be email , phone number , url , physical address , social media handle , etc. The text in the address usually returns in italic , and browsers will add a line break after and before the address element.
 
 # HTML COMMENTS
 
