@@ -131,7 +131,7 @@ hoistingExample();
 console.log(a);
 */
 
-/*
+
 function a(){
   console.log("1")
 }
@@ -140,7 +140,7 @@ function a(){
   console.log("2")
 }
 a();
-*/
+
 
 //====> OUTPUT : 2 2 -> coz the function declarations are hoisted completely and override each other if they have same name- only the last one survive.
 
@@ -177,3 +177,14 @@ console.log(test);
 
 
 
+let n = 0;
+const id = setInterval(() => {
+  n++;
+  console.log('I:', n);
+  if (n === 2) {
+    clearInterval(id);
+    Promise.resolve().then(() => console.log('PM:', n));
+  }
+}, 0);
+Promise.resolve().then(() => console.log('PM0:', n));
+console.log('End Sync');

@@ -41,11 +41,12 @@ Explanation:
 - The HTML style attribute is used to add styles to an element, such as color, font, size, and more.
 
   Syntax:
+
 ```
 <tagname style="property:value;">
 ```
 
-  Example:
+Example:
 
 ```html
 <h1 style="background-color: red;">My first heading</h1>
@@ -1072,4 +1073,45 @@ window.moveTo(100, 100) // Moves the window to position (100, 100)
 
 ```JavaScript
 
+```
+
+# Day-09
+
+## Things to Remember :
+
+- Macrotask only execute first item each time.
+- Microtask queue will be executed all the way until theree is nothing.
+- Function declarations are hoisted completely and override each other if they have the same name.
+- But in case of function expressions , you'd get different behaviour.
+
+```javascript
+function a() {
+  console.log("1")
+}
+a()
+function a() {
+  console.log("2")
+}
+a() // OUTPUT : 2 2 -> coz the function declarations are hoisted completely and override each other if they have same name- only the last one survive.
+```
+
+```javascript
+
+var a = function () {
+  console.log("1");
+};
+a();
+var a = function () {
+  console.log("2");
+};
+a(); //OUTPUT: 1 2 -> coz incase f function expressions ,  you get different behaviour , var doesnt overwrite the earlier assignment immediately- it just reassigns the  value later.
+```
+- Variables which are assigned without a var declaration are considered to be global variables, even if they are inside a function.
+
+```JavaScript
+function hoisting(){
+  a=1;
+}
+hoisting();
+console.log(a); // OUTPUT: 1 -> a is not declared with var, so it becomes a global variable.
 ```

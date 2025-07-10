@@ -1,6 +1,8 @@
-
-setTimeout(() => console.log("timeout"), 1000);
-for (let i = 0; i < 100000; i++) {
-    console.log(i)
+function a(){
+  console.log("1")
 }
-console.log("loop done");
+a();
+function a(){
+  console.log("2")
+}
+a();
