@@ -355,3 +355,49 @@ library.forEach((element) => {
         console.log("Still need to read " + element.title)
     }
 });
+
+//<===================>
+var a;
+console.log(1, a);
+a = 10;
+
+function aba() {
+    console.log(2, a);
+    a = 20;
+    console.log(3, a);
+    let a;
+    console.log(4, a);
+    a = 30;
+    console.log(5, a);
+}
+
+console.log(6, a);
+aba()
+console.log(7, a);
+
+
+//<===================>
+const a = (a) => {
+    console.log(this);
+}
+
+function b(a) {
+    console.log(this);
+}
+
+a();
+b();
+
+//<================>
+const upperObject = {
+    abc: function () {
+        const object = {
+            arrow: () => {
+                console.log(this);
+            }
+        }
+        object.arrow()
+    }
+}
+
+upperObject.abc()
