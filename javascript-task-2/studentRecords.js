@@ -85,23 +85,31 @@ function addStudent(students, newStudent) {
 
     if (!Array.isArray(students)) {
         console.error("Students data must be in the form of an array..")
-        return [];
+        return null;
     }
 
     if (typeof newStudent !== "object" || newStudent === null) {
         console.error("New Student must be a valid object")
-        return students;
+        return null;
     }
+
     for (let field of requiredFields) {
         if (!(newStudent.hasOwnProperty(field))) {
             console.error(`Missing required field: ${field}`);
-            return students;
+            return null;
         }
     }
 
     if (typeof newStudent.id !== "number") {
         console.error("ID must be a number for new student")
-        return students;
+        return null;
+    }
+
+    for(let student of students){
+        if(newStudent.id === student.id){
+            console.error("Duplicate ID..");
+            return null;
+        }
     }
 
 
@@ -704,6 +712,7 @@ function topStudentsByCourse(students, courseName, n) {
         console.error("n must be a positive number.");
         return null;
     }
+    
     const result = []
 
     for (let student of students) {
