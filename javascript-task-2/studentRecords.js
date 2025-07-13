@@ -309,43 +309,102 @@ console.log(getCourseRoster(students, "Physics I"))
 
 //<================= Print student Summaries =================>
 
-/*
+
 function printStudentSummaries(students) {
-    return students.map((student) => {
-        return ({
+
+    const result = [];
+    if (!Array.isArray(students)) {
+        console.error("Students must be an array.");
+        return null;
+    }
+
+    for (let student of students) {
+        if (
+            typeof student !== "object" || student === null ||
+            typeof student.name !== "string" || student.name.trim() === "" ||
+            typeof student.id !== "number" || isNaN(student.id) ||
+            typeof student.age !== "number" || isNaN(student.age)
+        ) {
+            console.error("Invalid student object:", student);
+            continue;
+        }
+        result.push({
             name: student.name,
             id: student.id,
             age: student.age
         })
-    })
+    }
+    return result;
 }
 console.table(printStudentSummaries(students))
-*/
+
 
 //<================= Find first underAge =================>
 
-/*
 function findFirstUnderage(students, ageLimit) {
 
-for (let student of students) {
-    if (student.age < ageLimit) {
-        return student;
-        }
-        }
-        return null
-        }
+    if (!Array.isArray(students)) {
+        console.error("Students must be an array.");
+        return null;
+    }
+    if (typeof ageLimit !== "number" || isNaN(ageLimit) || ageLimit < 0) {
+        console.error("Age Limit must be a non-negative number.");
+        return null;
+    }
 
-        console.log(findFirstUnderage(students, 16));
-        */
+    for (let student of students) {
+        if (
+            typeof student !== "object" || student === null ||
+            typeof student.age !== "number" || isNaN(student.age) || student.age < 0
+        ) {
+            console.error(`Invalid student`);
+            continue;
+        }
+        if (student.age < ageLimit) {
+            return student;
+        }
+    }
+    return null
+}
+
+console.log(findFirstUnderage(students, 16));
+
 
 
 //<================= countFailingCourses =================>
 
-/*
+
 function countFailingCourses(students, passMark) {
+
     let count = 0;
+
+    if (!Array.isArray(students)) {
+        console.error("Students must be an array.");
+        return null;
+    }
+
+    if (typeof passMark !== "number" || isNaN(passMark) || passMark < 0) {
+        console.error("Passing Marks must be a non-negative number.");
+        return null;
+    }
+
     for (let student of students) {
+        if (
+            typeof student !== "object" || student === null ||
+            !Array.isArray(student.courses)
+        ) {
+            console.log("Invalid student");
+            continue;
+        }
+
         for (let course of student.courses) {
+            if (
+                typeof course !== "object" || course === null ||
+                typeof course.grade !== "number" || isNaN(course.grade) || course.grade < 0
+            ) {
+                console.log("Invalid course");
+                continue;
+            }
             if (course.grade < passMark) {
                 count++;
             }
@@ -355,14 +414,76 @@ function countFailingCourses(students, passMark) {
 }
 
 console.log(countFailingCourses(students, 75))
-*/
+
+
+//<================= Print Course Status =================>
+
+function printCourseStats(students) {
+    const courseGrades = {};
+
+
+    if (!Array.isArray(students)) {
+        console.error("Students must be an array.");
+        return null;
+    }
+
+
+    for (let student of students) {
+        if (
+            typeof student !== "object" || student === null ||
+            !Array.isArray(student.courses)
+        ) {
+            console.log("Invalid student");
+            continue;
+        }
+        for (let course of student.courses) {
+            if (
+                typeof course !== "object" || course === null ||
+                typeof course.name !== "string" || course.name.trim() === "" ||
+                typeof course.grade !== "number" || isNaN(course.grade) || course.grade < 0
+            ) {
+                console.log("Invalid course");
+                continue;
+            }
+            if (!courseGrades[course.name]) {
+                courseGrades[course.name] = [];
+            }
+            courseGrades[course.name].push(course.grade);
+        }
+    }
+
+    for (let [courseName, grades] of Object.entries(courseGrades)) {
+        let min = Math.min(...grades);
+        let max = Math.max(...grades);
+        let avg = grades.reduce((sum, grade) => sum + grade, 0) / grades.length;
+
+        console.log(`${courseName}: min=${min}, max=${max}, avg=${avg}`);
+    }
+}
+printCourseStats(students);
 
 //<================= Create Grade Filter =================>
 
-/*
+
 function createGradeFilter(min, max) {
 
+    if (
+        typeof min !== "number" || isNaN(min) || min < 0 ||
+        typeof max !== "number" || isNaN(max) || max <= min
+    ) {
+        console.log("Min and Max must be valid numbers, and max must be greater than min.");
+        return null;
+    }
+
     return function (student) {
+        if (
+            typeof student !== "object" || student === null ||
+            typeof student.name !== "string" ||
+            !Array.isArray(student.courses)
+        ) {
+            console.log("Invalid student object ");
+            return null;
+        }
         return student.courses.map((course) => {
             return ({
                 studentName: student.name,
@@ -376,60 +497,120 @@ function createGradeFilter(min, max) {
 }
 const gradeFilter = createGradeFilter(60, 85)
 console.log(gradeFilter(students[1]))
-*/
+
 
 //<================= Get Courses By Instructor =================>
 
-/*
+
 function getCoursesByInstructor(courses, instructorId) {
-const courseByInstuctor = []
+    const courseByInstuctor = []
 
-for (let course of courses) {
-    if (course.instructorId === instructorId) {
-        courseByInstuctor.push({ code: course.code, title: course.title })
+    if (!Array.isArray(courses)) {
+        console.error("Courses must be an array.");
+        return null;
     }
-}
 
-return courseByInstuctor;
+    if (typeof instructorId !== "number" || isNaN(instructorId) || instructorId < 0) {
+        console.error("Invalid instructor ID");
+        return null;
+    }
+
+    for (let course of courses) {
+
+        if (
+            typeof course !== "object" || course === null ||
+            typeof course.instructorId !== "number" ||
+            typeof course.code !== "string" || course.code.trim() === "" ||
+            typeof course.title !== "string" || course.title.trim() === ""
+        ) {
+            console.log("Invalid course.");
+            continue;
+        }
+        if (course.instructorId === instructorId) {
+            courseByInstuctor.push({ code: course.code, title: course.title })
+        }
+    }
+
+    return courseByInstuctor;
 }
 
 console.log(getCoursesByInstructor(courses, 101))
-*/
+
 
 //<================= Total Credits per Student =================>
 
-/*
+
 function totalCreditsPerStudent(students, courses) {
 
-return students.map((student) => {
-    let totalCredits = 0;
-    for (let course of student.courses) {
-        for (let c of courses) {
-            if (c.title === course.name) {
-                totalCredits += c.credits;
+    if (!Array.isArray(students)) {
+        console.error("Students must be an array.");
+        return null;
+    }
+
+    if (!Array.isArray(courses)) {
+        console.error("Courses must be an array.");
+        return null;
+    }
+
+    return students.map((student) => {
+        if (
+            typeof student !== "object" || student === null ||
+            typeof student.name !== "string" ||
+            !Array.isArray(student.courses)
+        ) {
+            console.log("Invalid student object ");
+            return null;
+        }
+        let totalCredits = 0;
+        for (let course of student.courses) {
+            for (let c of courses) {
+                if (c.title === course.name) {
+                    totalCredits += c.credits;
+                }
             }
         }
-    }
-    return ({
-        name: student.name,
-        id: student.id,
-        credits: totalCredits
-    })
+        return ({
+            name: student.name,
+            id: student.id,
+            credits: totalCredits
+        })
 
-})
+    })
 
 
 }
 console.log(totalCreditsPerStudent(students, courses));
-*/
+
 
 //<================= Student Transcript =================>
 
-/*
+
 function studentTranscript(students, courses, instructors) {
+
+    if (!Array.isArray(students)) {
+        console.error("Students must be an array.");
+        return null;
+    }
+    if (!Array.isArray(courses)) {
+        console.error("Courses must be an array.");
+        return null;
+    }
+    if (!Array.isArray(instructors)) {
+        console.error("Instructors must be an array.");
+        return null;
+    }
     const result = []
 
     for (let student of students) {
+        if (
+            typeof student !== "object" || student === null ||
+            typeof student.name !== "string" ||
+            typeof student.id !== "number" ||
+            !Array.isArray(student.courses)
+        ) {
+            console.log("Invalid student data...");
+            continue;
+        }
         const transcript = []
         for (let course of student.courses) {
             for (let c of courses) {
@@ -455,16 +636,85 @@ function studentTranscript(students, courses, instructors) {
     return result;
 }
 console.dir(studentTranscript(students, courses, instructors), { depth: null })
-*/
 
+
+
+//<================= Course Average =================>
+
+function courseAverages(students) {
+    if (!Array.isArray(students)) {
+        console.error("Students must be an array.");
+        return null;
+    }
+    const courseGrades = {};
+
+    for (let student of students) {
+        if (
+            typeof student !== "object" || student === null ||
+            !Array.isArray(student.courses)
+        ) {
+            console.warn("Invalid student");
+            continue;
+        }
+
+        for (let course of student.courses) {
+            if (
+                typeof course !== "object" || course === null ||
+                typeof course.name !== "string" || course.name.trim() === "" ||
+                typeof course.grade !== "number" || isNaN(course.grade)
+            ) {
+                console.warn("Invalid course entry");
+                continue;
+            }
+
+            if (!courseGrades[course.name]) {
+                courseGrades[course.name] = [];
+            }
+            courseGrades[course.name].push(course.grade);
+        }
+    }
+
+    return Object.entries(courseGrades).map(([course, grades]) => {
+        const total = grades.reduce((sum, grade) => sum + grade, 0);
+        const avg = total / grades.length;
+        return {
+            course,
+            avgGrade: parseFloat(avg.toFixed(2))
+        };
+    });
+}
+courseAverages(students);
 
 //<================= Top Students By Course =================>
 
-/*
+
 function topStudentsByCourse(students, courseName, n) {
+
+    if (!Array.isArray(students)) {
+        console.error("Students must be an array.");
+        return null;
+    }
+
+    if (typeof courseName !== "string" || courseName.trim() === "") {
+        console.error("Course name must be a non-empty string.");
+        return null;
+    }
+
+    if (typeof n !== "number" || isNaN(n) || n < 1) {
+        console.error("n must be a positive number.");
+        return null;
+    }
     const result = []
 
     for (let student of students) {
+        if (
+            typeof student !== "object" || student === null ||
+            typeof student.name !== "string" ||
+            !Array.isArray(student.courses)
+        ) {
+            console.warn("Invalid student");
+            continue;
+        }
         for (let course of student.courses) {
             if (course.name === courseName) {
                 result.push({
@@ -480,7 +730,7 @@ function topStudentsByCourse(students, courseName, n) {
     return result.slice(0, n);
 }
 console.table(topStudentsByCourse(students, courses[1].title, 5))
-*/
+
 
 //console.table(students);
 
