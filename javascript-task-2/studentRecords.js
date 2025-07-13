@@ -687,7 +687,7 @@ function courseAverages(students) {
         const avg = total / grades.length;
         return {
             course,
-            avgGrade: parseFloat(avg.toFixed(2))
+            avgGrade: avg
         };
     });
 }
@@ -741,5 +741,5 @@ function topStudentsByCourse(students, courseName, n) {
 console.table(topStudentsByCourse(students, courses[1].title, 5))
 
 
-//console.table(students);
+console.table(students);
 
