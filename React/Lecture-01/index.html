@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React Lecture 01</title>
+  </head>
+
+  <body>
+    <p>Hello</p>
+    <div id="root">child2</div>
+    <p>Hello</p>
+
+    <!-- <script>
+        const root  = document.getElementById("root")
+        const heading = document.createElement("h1")
+        heading.innerText = "Hello world"
+        root.appendChild(heading)
+    </script> -->
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <!-- Contains core react features and code -->
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <!-- 
+    - Acts as a  bridge between react    and browsers to connect to the dom.
+    - Helps to modify the dom 
+    -->
+
+    <script src="App.js"></script>
+  </body>
+</html>

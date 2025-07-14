@@ -1096,16 +1096,16 @@ a() // OUTPUT : 2 2 -> coz the function declarations are hoisted completely and 
 ```
 
 ```javascript
-
 var a = function () {
-  console.log("1");
-};
-a();
+  console.log("1")
+}
+a()
 var a = function () {
-  console.log("2");
-};
-a(); //OUTPUT: 1 2 -> coz incase f function expressions ,  you get different behaviour , var doesnt overwrite the earlier assignment immediately- it just reassigns the  value later.
+  console.log("2")
+}
+a() //OUTPUT: 1 2 -> coz incase f function expressions ,  you get different behaviour , var doesnt overwrite the earlier assignment immediately- it just reassigns the  value later.
 ```
+
 - Variables which are assigned without a var declaration are considered to be global variables, even if they are inside a function.
 
 ```JavaScript
@@ -1115,3 +1115,137 @@ function hoisting(){
 hoisting();
 console.log(a); // OUTPUT: 1 -> a is not declared with var, so it becomes a global variable.
 ```
+
+# React Day 01: Introduction to React Basics
+
+## Overview
+
+On Day 01 of learning React, I explored the foundational concepts of React, a JavaScript library for building user interfaces. This session focused on understanding how React creates and renders elements to the DOM, the role of ReactDOM, and the structure of a basic React application. The code provided serves as a starting point to grasp these concepts through practical examples.
+
+## Learning Objectives
+
+- Understand the purpose of `React.createElement` and how it creates React elements.
+- Learn how `ReactDOM.createRoot` and `root.render` work together to render content to the DOM.
+- Explore the creation of nested React elements to represent complex HTML structures.
+- Recognize the importance of script order and the flexibility of choosing a root element for React rendering.
+
+## Key Concepts
+
+### 1. Setting Up a React Application
+
+To begin using React, I included two essential scripts in the HTML file:
+
+- **React**: The core React library, included via a CDN (`https://unpkg.com/react@18/umd/react.development.js`), which provides features for creating and managing React elements.
+- **ReactDOM**: A bridge between React and the browser’s DOM, included via a CDN (`https://unpkg.com/react-dom@18/umd/react-dom.development.js`), which enables rendering React elements to the webpage.
+
+**Question to Reflect**: Why is it necessary to include both React and ReactDOM scripts? What happens if one is missing?
+
+**Code Example**:
+
+```html
+<script
+  crossorigin
+  src="https://unpkg.com/react@18/umd/react.development.js"
+></script>
+<script
+  crossorigin
+  src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+></script>
+<script src="App.js"></script>
+```
+
+**Insight**: The order of scripts matters. The React and ReactDOM scripts must be loaded before the application script (`App.js`) because the application code depends on these libraries. Loading `App.js` first results in errors since React is not yet defined.
+
+### 2. Creating React Elements with `React.createElement`
+
+The `React.createElement` function is used to create React elements, which are JavaScript objects representing HTML elements. These objects are not actual HTML elements but are later converted into HTML by ReactDOM during rendering.
+
+**Syntax**:
+
+```javascript
+React.createElement(type, props, children)
+```
+
+- `type`: The HTML tag or component (e.g., `"h1"`, `"div"`).
+- `props`: An object containing attributes for the element (e.g., `{ id: "heading" }`).
+- `children`: The content inside the element, which can be a string, another React element, or an array of elements.
+
+**Example**:
+
+```javascript
+const heading = React.createElement(
+  "h1",
+  { id: "heading" },
+  "Hello world from React!"
+)
+console.log(heading) // Logs a React element (JavaScript object)
+```
+
+**Question to Reflect**: What is the difference between a React element and an HTML element? Why does `React.createElement` produce a JavaScript object instead of directly creating an HTML tag?
+
+
+### 3. Rendering to the DOM with `ReactDOM.createRoot` and `root.render`
+
+To display React elements on the webpage, I used `ReactDOM.createRoot` to create a root node and `root.render` to render the React element into that node.
+
+**Steps**:
+
+1. Select a DOM element to serve as the root (e.g., `<div id="root">`).
+2. Create a root using `ReactDOM.createRoot(document.getElementById("root"))`.
+3. Render the React element using `root.render(element)`.
+
+**Example**:
+
+```javascript
+const root = ReactDOM.createRoot(document.getElementById("root"))
+root.render(heading)
+```
+
+**Insight**: The `root.render` method replaces all existing content inside the root element with the rendered React element. For example, if the `<div id="root">` contains `<p>child2</p>`, it will be overwritten by the rendered content.
+
+**Question to Reflect**: What would happen if you called `root.render` multiple times with different elements? How does React handle updates to the DOM?
+
+### 4. Creating Nested Structures
+
+React allows the creation of complex, nested HTML structures by passing arrays of React elements as children to `React.createElement`.
+
+**Example**:
+
+```javascript
+const nested = React.createElement("div", { id: "parent" }, [
+  React.createElement("div", { id: "child1" }, [
+    React.createElement("h1", {}, "Hello! I am child1 H1 Tag.."),
+    React.createElement("h2", {}, "Hello! I am child1 H2 Tag.."),
+  ]),
+  React.createElement("div", { id: "child2" }, [
+    React.createElement("h1", {}, "Hello! I am child2 H1 Tag.."),
+    React.createElement("h2", {}, "Hello! I am child2 H2 Tag.."),
+  ]),
+])
+root.render(nested)
+```
+
+**Insight**: This code creates a nested structure equivalent to:
+
+```html
+<div id="parent">
+  <div id="child1">
+    <h1>Hello! I am child1 H1 Tag..</h1>
+    <h2>Hello! I am child1 H2 Tag..</h2>
+  </div>
+  <div id="child2">
+    <h1>Hello! I am child2 H1 Tag..</h1>
+    <h2>Hello! I am child2 H2 Tag..</h2>
+  </div>
+</div>
+```
+
+### 5. Flexibility of the Root Element
+
+React can be used to manage a small portion of a webpage or the entire application. The root element (e.g., `<div id="root">`) can be any DOM element, such as a `<header>`, `<nav>`, or a specific section.
+
+**Insight**: This flexibility allows React to be integrated into existing projects without requiring a full rewrite. For example, you could use React for a single interactive component while the rest of the page uses vanilla JavaScript or another framework.
+
+**Question to Reflect**: How might you decide which part of a webpage should be managed by React? What are the trade-offs of using React for only a portion of a page?
+
+
