@@ -38,10 +38,3 @@ const Head = () => {
 const root = ReactDOM.createRoot(document.getElementById("root"))
 root.render(<Head />);
 
-//- const jsxHeading = (<h1>Jsx heading</h1 >) ==>  Babel Transpiles it into react.createElement.
-//- Jsx is trasnspiled by the compilers or bundlers under the hood before reaches it it into the document
-// - At the end of the day ,functional components are functions only.
-// - At the end of the day, React elements are converted into react.createElements and react.createElements are nothing but javascript objects.
-// - {}--> Inside these curly braces you can execute any piece of javscript code , you can console,log , you can call function , you can use variables , you can use react elements , you can use javascript variables, you can even call the functional components inside these curly braces coz functional components are also functions. 
-// - {} --> With the help of these curly braces you can even put react elements within other react elements , you can put react element into component , components into react elements , anything.
-// - {}--> Also these curly braces do the data sanitization , so igt will protect your browser from malicious data .

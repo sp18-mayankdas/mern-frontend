@@ -240,7 +240,7 @@ HSLA COLOR: hsla(9, 100%, 64%, 0.5)
 - If we put starting as well as the last position,
 
 ```javascript
-array.slice(2, 4)
+array.slice(2, 4);
 ```
 
 - from 2nd position till this position (ie., 4) excluding this index
@@ -257,9 +257,9 @@ array.slice(2, 4)
 
 ```javascript
 // Example:
-const array = [10, 20, 30, 40, 50]
+const array = [10, 20, 30, 40, 50];
 
-array.splice(3, 1, 80, "90", true)
+array.splice(3, 1, 80, "90", true);
 ```
 
 - means at 3rd index , remove 1 element and at that position add 80 , "90" and true.
@@ -280,8 +280,8 @@ array.splice(3, 1, 80, "90", true)
   - Arrays
 - If we have 2 objects having same data, they will not be equal to each other coz they are stored in different memory locations.
   ```javascript
-  const obj1 = { name: "John", age: 30 }
-  const obj2 = { name: "John", age: 30 }
+  const obj1 = { name: "John", age: 30 };
+  const obj2 = { name: "John", age: 30 };
   ```
 - So , console.log(obj1 === obj2) will return false because the objects are reference types and we dont compare the value , we compare the address.
 
@@ -289,8 +289,8 @@ array.splice(3, 1, 80, "90", true)
 
 - So , console.log(obj1 === obj2) will return true , for
   ```javascript
-  const obj1 = { name: "John", age: 30 }
-  const obj2 = obj1
+  const obj1 = { name: "John", age: 30 };
+  const obj2 = obj1;
   ```
 - In this case , we directly assigned obj1 to obj2, so both are pointing to same memory location.so eve if we will make any changes in obj2, it will also reflect in obj1.
 
@@ -302,16 +302,16 @@ array.splice(3, 1, 80, "90", true)
 - We can write any valid javascript expression and variables inside the brackets to access the property of an object.
 
   ```javascript
-  const myName = "mayank"
-  const obj1 = { name: "John", age: 30, mayank: "developer" }
-  console.log(obj1[myName]) // will return "developer" coz myName is a variable and it has the value "mayank" which is a key in the object obj1.
+  const myName = "mayank";
+  const obj1 = { name: "John", age: 30, mayank: "developer" };
+  console.log(obj1[myName]); // will return "developer" coz myName is a variable and it has the value "mayank" which is a key in the object obj1.
   ```
 
 - We can also write expressions like this:
 
   ```javascript
-  const obj1 = { fullName: "John" }
-  console.log(obj1["full" + "Name"]) // will return "John"
+  const obj1 = { fullName: "John" };
+  console.log(obj1["full" + "Name"]); // will return "John"
   ```
 
 - We can add or update any values inside objects
@@ -361,7 +361,7 @@ for (let i = 0, len = car.length, text = ""; i < len; i++) {
 
 ```javascript
 for (let i = 0; i < 5; i++) {
-  console.log(i) // Outputs: 0, 1, 2, 3, 4
+  console.log(i); // Outputs: 0, 1, 2, 3, 4
 }
 ```
 
@@ -373,9 +373,9 @@ for (let i = 0; i < 5; i++) {
 **Example**: Iterating an array:
 
 ```javascript
-const arr = ["a", "b", "c"]
+const arr = ["a", "b", "c"];
 for (let i = 0; i < arr.length; i++) {
-  console.log(arr[i]) // Outputs: a, b, c
+  console.log(arr[i]); // Outputs: a, b, c
 }
 ```
 
@@ -410,9 +410,9 @@ for (let key in object) {
 ### Example
 
 ```javascript
-const obj = { a: 1, b: 2, c: 3 }
+const obj = { a: 1, b: 2, c: 3 };
 for (let key in obj) {
-  console.log(key, obj[key]) // Outputs: a 1, b 2, c 3
+  console.log(key, obj[key]); // Outputs: a 1, b 2, c 3
 }
 ```
 
@@ -424,12 +424,12 @@ for (let key in obj) {
 **Example**: Summing object values:
 
 ```javascript
-const obj = { a: 10, b: 20, c: 30 }
-let sum = 0
+const obj = { a: 10, b: 20, c: 30 };
+let sum = 0;
 for (let key in obj) {
-  sum += obj[key]
+  sum += obj[key];
 }
-console.log(sum) // Outputs: 60
+console.log(sum); // Outputs: 60
 ```
 
 ### When to Use
@@ -440,10 +440,10 @@ console.log(sum) // Outputs: 60
 
 - **Avoid for Arrays**: Iterates over enumerable properties, not just indices, and order isn’t guaranteed.
   ```javascript
-  const arr = [1, 2, 3]
-  arr.custom = "test"
+  const arr = [1, 2, 3];
+  arr.custom = "test";
   for (let i in arr) {
-    console.log(i) // Outputs: 0, 1, 2, custom
+    console.log(i); // Outputs: 0, 1, 2, custom
   }
   ```
 
@@ -453,7 +453,7 @@ console.log(sum) // Outputs: 60
   ```javascript
   for (let key in obj) {
     if (obj.hasOwnProperty(key)) {
-      console.log(key, obj[key])
+      console.log(key, obj[key]);
     }
   }
   ```
@@ -479,9 +479,9 @@ for (let value of iterable) {
 ### Example
 
 ```javascript
-const arr = ["x", "y", "z"]
+const arr = ["x", "y", "z"];
 for (let value of arr) {
-  console.log(value) // Outputs: x, y, z
+  console.log(value); // Outputs: x, y, z
 }
 ```
 
@@ -494,7 +494,7 @@ for (let value of arr) {
 
 ```javascript
 for (let char of "hello") {
-  console.log(char) // Outputs: h, e, l, l, o
+  console.log(char); // Outputs: h, e, l, l, o
 }
 ```
 
@@ -507,10 +507,10 @@ for (let char of "hello") {
 
 - Not for plain objects (use `for...in` or `Object.keys/values/entries` with `for...of`).
   ```javascript
-  const obj = { a: 1, b: 2 }
+  const obj = { a: 1, b: 2 };
   for (let value of obj) {
     // Error: obj is not iterable
-    console.log(value)
+    console.log(value);
   }
   ```
 
@@ -519,7 +519,7 @@ for (let char of "hello") {
 - Use with `entries()` for indices:
   ```javascript
   for (let [index, value] of arr.entries()) {
-    console.log(`${index}: ${value}`)
+    console.log(`${index}: ${value}`);
   }
   ```
 
@@ -538,16 +538,16 @@ The `forEach` method is a functional approach to iterating over arrays, executin
 ```javascript
 array.forEach((element, index, array) => {
   // Code to execute
-})
+});
 ```
 
 ### Example
 
 ```javascript
-const arr = ["a", "b", "c"]
+const arr = ["a", "b", "c"];
 arr.forEach((value, index) => {
-  console.log(`${index}: ${value}`) // Outputs: 0: a, 1: b, 2: c
-})
+  console.log(`${index}: ${value}`); // Outputs: 0: a, 1: b, 2: c
+});
 ```
 
 ### Use Cases
@@ -569,9 +569,9 @@ arr.forEach((value, index) => {
 
 ```javascript
 arr.forEach((value) => {
-  if (value === "b") return // Acts like continue
-  console.log(value) // Outputs: a, c
-})
+  if (value === "b") return; // Acts like continue
+  console.log(value); // Outputs: a, c
+});
 ```
 
 **Question**: Why can’t `break` be used in `forEach`? How would you simulate it?
@@ -595,10 +595,10 @@ while (condition) {
 ### Example
 
 ```javascript
-let i = 0
+let i = 0;
 while (i < 5) {
-  console.log(i) // Outputs: 0, 1, 2, 3, 4
-  i++
+  console.log(i); // Outputs: 0, 1, 2, 3, 4
+  i++;
 }
 ```
 
@@ -610,9 +610,9 @@ while (i < 5) {
 **Example**: Processing a queue:
 
 ```javascript
-const queue = [1, 2, 3]
+const queue = [1, 2, 3];
 while (queue.length > 0) {
-  console.log(queue.shift()) // Outputs: 1, 2, 3
+  console.log(queue.shift()); // Outputs: 1, 2, 3
 }
 ```
 
@@ -641,17 +641,17 @@ The `do...while` loop executes the body at least once before checking the condit
 ```javascript
 do {
   // Code to execute
-} while (condition)
+} while (condition);
 ```
 
 ### Example
 
 ```javascript
-let i = 0
+let i = 0;
 do {
-  console.log(i) // Outputs: 0, 1, 2, 3, 4
-  i++
-} while (i < 5)
+  console.log(i); // Outputs: 0, 1, 2, 3, 4
+  i++;
+} while (i < 5);
 ```
 
 ### Use Cases
@@ -662,11 +662,11 @@ do {
 **Example**: Prompting until valid:
 
 ```javascript
-let input
+let input;
 do {
-  input = prompt("Enter a number:")
-} while (isNaN(input))
-console.log(Number(input))
+  input = prompt("Enter a number:");
+} while (isNaN(input));
+console.log(Number(input));
 ```
 
 ### When to Use
@@ -694,7 +694,7 @@ Nested loops involve one loop inside another, often used for multi-dimensional d
 ```javascript
 for (let i = 0; i < 2; i++) {
   for (let j = 0; j < 2; j++) {
-    console.log(i, j) // Outputs: 0 0, 0 1, 1 0, 1 1
+    console.log(i, j); // Outputs: 0 0, 0 1, 1 0, 1 1
   }
 }
 ```
@@ -726,8 +726,8 @@ for (let i = 0; i < 2; i++) {
 
 ```javascript
 for (let i = 0; i < 5; i++) {
-  if (i === 3) break
-  console.log(i) // Outputs: 0, 1, 2
+  if (i === 3) break;
+  console.log(i); // Outputs: 0, 1, 2
 }
 ```
 
@@ -735,8 +735,8 @@ for (let i = 0; i < 5; i++) {
 
 ```javascript
 for (let i = 0; i < 5; i++) {
-  if (i === 3) continue
-  console.log(i) // Outputs: 0, 1, 2, 4
+  if (i === 3) continue;
+  console.log(i); // Outputs: 0, 1, 2, 4
 }
 ```
 
@@ -747,8 +747,8 @@ Use labels to control outer loops:
 ```javascript
 outerLoop: for (let i = 0; i < 3; i++) {
   for (let j = 0; j < 3; j++) {
-    if (i === 1 && j === 1) break outerLoop
-    console.log(i, j) // Outputs: 0 0, 0 1, 0 2, 1 0
+    if (i === 1 && j === 1) break outerLoop;
+    console.log(i, j); // Outputs: 0 0, 0 1, 0 2, 1 0
   }
 }
 ```
@@ -773,14 +773,14 @@ outerLoop: for (let i = 0; i < 3; i++) {
 `break` prevents fall-through in `switch`:
 
 ```javascript
-let day = 1
+let day = 1;
 switch (day) {
   case 1:
-    console.log("Monday")
-    break
+    console.log("Monday");
+    break;
   case 2:
-    console.log("Tuesday")
-    break
+    console.log("Tuesday");
+    break;
 }
 ```
 
@@ -799,14 +799,14 @@ switch (day) {
 **Example**:
 
 ```javascript
-const arr = [1, 2, 3]
+const arr = [1, 2, 3];
 for (let i = 0; i < arr.length; i++) {
-  console.log(arr[i]) // Index-based
+  console.log(arr[i]); // Index-based
 }
 for (let value of arr) {
-  console.log(value) // Value-based
+  console.log(value); // Value-based
 }
-arr.forEach((value) => console.log(value)) // Functional
+arr.forEach((value) => console.log(value)); // Functional
 ```
 
 ### Objects
@@ -817,12 +817,12 @@ arr.forEach((value) => console.log(value)) // Functional
 **Example**:
 
 ```javascript
-const obj = { a: 1, b: 2 }
+const obj = { a: 1, b: 2 };
 for (let key in obj) {
-  console.log(key, obj[key])
+  console.log(key, obj[key]);
 }
 for (let value of Object.values(obj)) {
-  console.log(value) // Outputs: 1, 2
+  console.log(value); // Outputs: 1, 2
 }
 ```
 
@@ -834,9 +834,9 @@ for (let value of Object.values(obj)) {
 **Example**:
 
 ```javascript
-const keys = Object.keys(obj)
+const keys = Object.keys(obj);
 for (let i = 0; i < keys.length; i++) {
-  console.log(keys[i], obj[keys[i]]) // Cumbersome
+  console.log(keys[i], obj[keys[i]]); // Cumbersome
 }
 ```
 
@@ -865,9 +865,9 @@ for (let i = 0; i < keys.length; i++) {
    - Ensure condition updates (e.g., increment in `while`).
 
    ```javascript
-   let i = 0
+   let i = 0;
    while (i < 5) {
-     i++ // Prevent infinite loop
+     i++; // Prevent infinite loop
    }
    ```
 
@@ -876,7 +876,7 @@ for (let i = 0; i < keys.length; i++) {
    ```javascript
    for (let key in obj) {
      if (obj.hasOwnProperty(key)) {
-       console.log(key)
+       console.log(key);
      }
    }
    ```
@@ -889,7 +889,7 @@ for (let i = 0; i < keys.length; i++) {
    - Use `let` for block scoping in async loops:
      ```javascript
      for (let i = 0; i < 3; i++) {
-       setTimeout(() => console.log(i), 1000) // Outputs: 0, 1, 2
+       setTimeout(() => console.log(i), 1000); // Outputs: 0, 1, 2
      }
      ```
 
@@ -902,18 +902,18 @@ for (let i = 0; i < keys.length; i++) {
 1. **Infinite Loops**:
 
    ```javascript
-   let i = 0
+   let i = 0;
    while (i < 5) {
-     console.log(i) // Infinite if i++ is missing
+     console.log(i); // Infinite if i++ is missing
    }
    ```
 
 2. **Modifying Iterables**:
 
    ```javascript
-   let arr = [1, 2, 3]
+   let arr = [1, 2, 3];
    for (let i = 0; i < arr.length; i++) {
-     arr.push(4) // Infinite loop
+     arr.push(4); // Infinite loop
    }
    ```
 
@@ -921,7 +921,7 @@ for (let i = 0; i < keys.length; i++) {
 
    ```javascript
    for (var i = 0; i < 3; i++) {
-     setTimeout(() => console.log(i), 1000) // Outputs: 3, 3, 3
+     setTimeout(() => console.log(i), 1000); // Outputs: 3, 3, 3
    }
    ```
 
@@ -929,28 +929,28 @@ for (let i = 0; i < keys.length; i++) {
 
    ```javascript
    for (var i = 0; i < 3; i++) {
-     ;(function (i) {
-       setTimeout(() => console.log(i), 1000) // Outputs: 0, 1, 2
-     })(i)
+     (function (i) {
+       setTimeout(() => console.log(i), 1000); // Outputs: 0, 1, 2
+     })(i);
    }
    ```
 
 4. **Non-Enumerable Properties**:
 
    ```javascript
-   const obj = { a: 1 }
-   Object.defineProperty(obj, "b", { value: 2, enumerable: false })
+   const obj = { a: 1 };
+   Object.defineProperty(obj, "b", { value: 2, enumerable: false });
    for (let key in obj) {
-     console.log(key) // Outputs: a
+     console.log(key); // Outputs: a
    }
    ```
 
 5. **`break` in Labeled Blocks**:
    ```javascript
    myBlock: {
-     console.log("Start")
-     break myBlock
-     console.log("End") // Skipped
+     console.log("Start");
+     break myBlock;
+     console.log("End"); // Skipped
    }
    ```
 
@@ -964,7 +964,7 @@ for (let i = 0; i < keys.length; i++) {
 
    ```javascript
    for (var i = 0; i < 3; i++) {
-     setTimeout(() => console.log(i), 1000)
+     setTimeout(() => console.log(i), 1000);
    }
    ```
 
@@ -975,7 +975,7 @@ for (let i = 0; i < keys.length; i++) {
    ```javascript
    for (let i = 0; i < 2; i++) {
      for (let j = 0; j < 2; j++) {
-       console.log(i, j)
+       console.log(i, j);
      }
    }
    ```
@@ -985,10 +985,10 @@ for (let i = 0; i < keys.length; i++) {
 3. **What happens if you modify an array during iteration?**
 
    ```javascript
-   const arr = [1, 2, 3]
+   const arr = [1, 2, 3];
    for (let i = 0; i < arr.length; i++) {
-     arr.splice(i, 1)
-     console.log(arr[i])
+     arr.splice(i, 1);
+     console.log(arr[i]);
    }
    ```
 
@@ -999,8 +999,8 @@ for (let i = 0; i < keys.length; i++) {
    ```javascript
    outer: for (let i = 0; i < 2; i++) {
      for (let j = 0; j < 2; j++) {
-       if (j === 1) continue outer
-       console.log(i, j)
+       if (j === 1) continue outer;
+       console.log(i, j);
      }
    }
    ```
@@ -1010,11 +1010,11 @@ for (let i = 0; i < keys.length; i++) {
 5. **Can `break` be used in `forEach`?**
    _Answer_: No, causes `SyntaxError`. Use `some` or `for...of`:
    ```javascript
-   ;[1, 2, 3].some((num) => {
-     if (num === 2) return true
-     console.log(num) // Outputs: 1
-     return false
-   })
+   [1, 2, 3].some((num) => {
+     if (num === 2) return true;
+     console.log(num); // Outputs: 1
+     return false;
+   });
    ```
 
 # Day-08
@@ -1055,16 +1055,16 @@ for (let i = 0; i < keys.length; i++) {
 - `window.resizeBy(deltaWidth, deltaHeight)`: Changes the window size by a relative amount (increases or decreases width and height).
 
 ```javascript
-window.resizeBy(100, 100) // Increases window size by 100x100 pixels
-window.resizeTo(500, 400) // Sets window size to 500x400 pixels
+window.resizeBy(100, 100); // Increases window size by 100x100 pixels
+window.resizeTo(500, 400); // Sets window size to 500x400 pixels
 ```
 
 - `window.moveTo(x, y)`: Moves the current browser window to the specified coordinates on the screen.
 - `window.moveBy(deltaX, deltaY)`: Moves the current browser window by a relative amount (increases or decreases x and y coordinates).
 
 ```javascript
-window.moveBy(50, 50) // Moves the window 50 pixels right and 50 pixels down
-window.moveTo(100, 100) // Moves the window to position (100, 100)
+window.moveBy(50, 50); // Moves the window 50 pixels right and 50 pixels down
+window.moveTo(100, 100); // Moves the window to position (100, 100)
 ```
 
 - `window.scrollTo(x, y)`: Scrolls the current page to the specified coordinates.
@@ -1086,24 +1086,24 @@ window.moveTo(100, 100) // Moves the window to position (100, 100)
 
 ```javascript
 function a() {
-  console.log("1")
+  console.log("1");
 }
-a()
+a();
 function a() {
-  console.log("2")
+  console.log("2");
 }
-a() // OUTPUT : 2 2 -> coz the function declarations are hoisted completely and override each other if they have same name- only the last one survive.
+a(); // OUTPUT : 2 2 -> coz the function declarations are hoisted completely and override each other if they have same name- only the last one survive.
 ```
 
 ```javascript
 var a = function () {
-  console.log("1")
-}
-a()
+  console.log("1");
+};
+a();
 var a = function () {
-  console.log("2")
-}
-a() //OUTPUT: 1 2 -> coz incase f function expressions ,  you get different behaviour , var doesnt overwrite the earlier assignment immediately- it just reassigns the  value later.
+  console.log("2");
+};
+a(); //OUTPUT: 1 2 -> coz incase f function expressions ,  you get different behaviour , var doesnt overwrite the earlier assignment immediately- it just reassigns the  value later.
 ```
 
 - Variables which are assigned without a var declaration are considered to be global variables, even if they are inside a function.
@@ -1163,7 +1163,7 @@ The `React.createElement` function is used to create React elements, which are J
 **Syntax**:
 
 ```javascript
-React.createElement(type, props, children)
+React.createElement(type, props, children);
 ```
 
 - `type`: The HTML tag or component (e.g., `"h1"`, `"div"`).
@@ -1177,12 +1177,11 @@ const heading = React.createElement(
   "h1",
   { id: "heading" },
   "Hello world from React!"
-)
-console.log(heading) // Logs a React element (JavaScript object)
+);
+console.log(heading); // Logs a React element (JavaScript object)
 ```
 
 **Question to Reflect**: What is the difference between a React element and an HTML element? Why does `React.createElement` produce a JavaScript object instead of directly creating an HTML tag?
-
 
 ### 3. Rendering to the DOM with `ReactDOM.createRoot` and `root.render`
 
@@ -1197,8 +1196,8 @@ To display React elements on the webpage, I used `ReactDOM.createRoot` to create
 **Example**:
 
 ```javascript
-const root = ReactDOM.createRoot(document.getElementById("root"))
-root.render(heading)
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(heading);
 ```
 
 **Insight**: The `root.render` method replaces all existing content inside the root element with the rendered React element. For example, if the `<div id="root">` contains `<p>child2</p>`, it will be overwritten by the rendered content.
@@ -1221,8 +1220,8 @@ const nested = React.createElement("div", { id: "parent" }, [
     React.createElement("h1", {}, "Hello! I am child2 H1 Tag.."),
     React.createElement("h2", {}, "Hello! I am child2 H2 Tag.."),
   ]),
-])
-root.render(nested)
+]);
+root.render(nested);
 ```
 
 **Insight**: This code creates a nested structure equivalent to:
@@ -1249,3 +1248,13 @@ React can be used to manage a small portion of a webpage or the entire applicati
 **Question to Reflect**: How might you decide which part of a webpage should be managed by React? What are the trade-offs of using React for only a portion of a page?
 
 
+
+# React Day 02: Introduction to JSX, Bundlers , Parcel , Components and Props
+
+- const jsxHeading = (<h1>Jsx heading</h1 >) ==> Babel Transpiles it into react.createElement.
+- Jsx is trasnspiled by the compilers or bundlers under the hood before reaches it it into the document
+- At the end of the day ,functional components are functions only.
+- At the end of the day, React elements are converted into react.createElements and react.createElements are nothing but javascript objects.
+- {}--> Inside these curly braces you can execute any piece of javscript code , you can console,log , you can call function , you can use variables , you can use react elements , you can use javascript variables, you can even call the functional components inside these curly braces coz functional components are also functions.
+- {} --> With the help of these curly braces you can even put react elements within other react elements , you can put react element into component , components into react elements , anything.
+- {}--> Also these curly braces do the data sanitization , so igt will protect your browser from malicious data .
