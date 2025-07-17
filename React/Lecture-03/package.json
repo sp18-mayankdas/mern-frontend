@@ -1,0 +1,28 @@
+{
+    "name": "02_",
+    "version": "1.0.0",
+    "description": "This is Part 2 of react",
+    "scripts": {
+      "start":"parcel index.html",
+      "build":"parcel build index.html",
+      "test": "jest"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/Ouro-Mancer/React-JS.git"
+    },
+    "author": "Mayank",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/Ouro-Mancer/React-JS/issues"
+    },
+    "homepage": "https://github.com/Ouro-Mancer/React-JS#readme",
+    "devDependencies": {
+      "parcel": "^2.14.2"
+    },
+    "dependencies": {
+      "react": "^19.0.0",
+      "react-dom": "^19.0.0"
+    }
+  }
+  
