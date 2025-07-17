@@ -1,0 +1,118 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.App {
+  font-size: 40px;
+}
+
+.friendList {
+  text-align: center;
+}
+
+.users {
+  max-width: 1200px;
+  margin: 50px auto;
+  /* background-color: yellow; */
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* background-color: yellow; */
+  gap: 30px;
+  padding: 10px;
+}
+
+.userCard {
+  position: relative;
+  width: 100%;
+  max-width: 250px;
+  height: 350px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #ffffffe0;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  margin-bottom: 30px;
+}
+
+.userImage {
+  border-radius: 2px;
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.userName,
+.userAge {
+  font-size: 2rem;
+  font-weight: 700;
+  display: inline-block;
+  margin: 10px;
+}
+
+.Friends,
+.AddFriend {
+  position: absolute;
+  top: 340px;
+  left: 25px;
+  cursor: pointer;
+  width: 200px;
+  margin: 10px;
+  color: white;
+  font-weight: 600;
+  padding: 10px 5px;
+  border: none;
+  border-radius: 23px;
+  transition: all 0.2s ease-in-out;
+
+  &:active {
+    scale: 1.1;
+  }
+}
+
+.Friends {
+  background-color: rgb(255, 85, 85);
+}
+
+.AddFriend {
+  background-color: rgba(0, 140, 255);
+}
+
+.search {
+  /* background-color: white; */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 2px;
+  margin-bottom: 10px;
+}
+
+.searchBar {
+  width: 200px;
+  height: 30px;
+  border: 2px solid white;  
+  border-radius: 9px;
+  margin: 10px;
+  padding-left: 15px;
+}
+
+.searchButton {
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  width: 100px;
+  margin: 10px;
+  color: #cccccc;
+  font-weight: 600;
+  padding: 10px 5px;
+  border-radius: 10px;
+  text-align: center;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+}
