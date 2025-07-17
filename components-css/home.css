@@ -1,0 +1,392 @@
+/* <========================HOME========================> */
+
+
+.home {
+    /*background-color: yellow;*/
+    padding: 90px 0;
+}
+
+.home-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    flex-wrap: wrap;
+    /*background-color: yellow;*/
+}
+
+.left-section {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    /*background-color:red;*/
+}
+
+.left-section h1 {
+    font-size: 48px;
+    line-height: 60px;
+}
+
+
+.right-section {
+    position: relative;
+    /*flex: 1;*/
+    width: 600px;
+    height: 500px;
+    /*background-color: yellow;*/
+
+}
+
+.right-section img {
+    position: absolute;
+    object-fit: contain;
+    object-position: center;
+    /*max-width: 100%;*/
+    /*height: auto;*/
+}
+
+.iphone {
+    z-index: 3;
+    bottom: -10px;
+    left: 120px;
+    width: 220px;
+    height: 430px;
+}
+
+.macbook {
+    z-index: 2;
+    left: -80px;
+    bottom: 0px;
+    width: 1124px;
+    height: 550px;
+    padding: 20px;
+}
+
+.pattern {
+    z-index: 0;
+    left: 95px;
+    top: 40px;
+    opacity: 70%;
+    color: #5A7184;
+    width: 102px;
+    height: 118px;
+}
+
+.oval {
+    z-index: 1;
+    bottom: -60px;
+    right: -200px;
+    width: 300px;
+    opacity: 1;
+}
+
+.macbook-2 {
+    display: none;
+}
+
+/* 
+@media (max-width: 1115px) {
+
+    .header {
+        height: 1110px;
+        margin: 0;
+    }
+
+    .round-button {
+        position: relative;
+        height: 56px;
+        width: 56px;
+        bottom: -405px;
+    }
+
+    .home-section {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        text-align: center;
+        padding: 40px 20px;
+        gap: 2rem;
+        background-color: red;
+        max-width: 953px;
+        margin: -50px auto;
+    }
+
+    .left-section {
+        align-items: center;
+        max-width: 100%;
+        width: 520px;
+        height: 264px;
+    }
+
+    .left-section h1 {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 60px;
+        letter-spacing: 0.2px;
+        text-align: center;
+    }
+
+    .para-content {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 32px;
+        letter-spacing: 0px;
+        text-align: center;
+        min-width: 100%;
+    }
+
+    .right-section {
+        width: 615px;
+        height: 358px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+
+    .iphone {
+        /* position: relative; */
+/* z-index: 2;
+        width: 139px; */
+/* margin-top: -40px;
+        margin-bottom: 10px; */
+/* left: 1px;
+        top: 128px;
+    }
+
+    .macbook {
+        display: none;
+    }
+
+    .macbook-2 {
+        z-index: 1;
+        display: block;
+        /* position: relative; */
+/* max-width: 600px;
+        height: auto;
+        margin: 0 auto;
+        top: 130px;
+    } */
+
+/* .oval {
+        width: 378px;
+        height: 378px;
+        top: 147px;
+        left: 242px;
+        z-index: 0;
+    }
+
+    .pattern {
+        z-index: 0;
+        left: 32px;
+        top: 85px;
+    }
+} */
+
+
+@media screen and (max-width: 1200px) {
+
+    .header {
+        height: 1180px;
+        margin: 0;
+    }
+
+    .round-button {
+        position: relative;
+        height: 56px;
+        width: 56px;
+        bottom: -501px;
+    }
+
+    .home {
+        padding: 60px 0;
+    }
+
+    .home-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 3rem;
+        padding: 0 20px;
+        max-width: 100%;
+    }
+
+    .left-section {
+        align-items: center;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .left-section h1 {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 60px;
+        letter-spacing: 0.2px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .para-content {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 32px;
+        letter-spacing: 0px;
+        text-align: center;
+        /* margin-bottom: 10px; */
+        max-width: 512px;
+    }
+
+    .right-section {
+        width: 100%;
+        height: auto;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding-top: 40px;
+    }
+
+
+    .iphone {
+        width: 139px;
+        height: auto;
+        z-index: 2;
+        left: 128px;
+        top: -6px;
+    }
+
+    .macbook {
+        display: none;
+    }
+
+    .macbook-2 {
+        position: relative;
+        z-index: 1;
+        display: block;
+        /* width: 90%; */
+        height: auto;
+        margin: 0 auto;
+        top: -90px;
+        left: 130px;
+    }
+
+    .oval {
+        width: 378px;
+        height: 378px;
+        top: -67px;
+        left: 372px;
+        z-index: 0;
+    }
+
+    .pattern {
+        width: 65px;
+        height: 76px;
+
+
+        z-index: 0;
+        left: 167px;
+        top: -120px;
+    }
+}
+
+
+
+@media screen and (max-width: 992px) {
+
+    .header {
+        height: 1280px;
+    }
+
+
+    .iphone {
+
+        left: 32px;
+        top: -6px;
+    }
+
+
+    .macbook-2 {
+        top: -90px;
+        left: 35px;
+    }
+
+    .oval {
+
+        top: -67px;
+        left: 293px;
+    }
+
+    .pattern {
+
+        left: 73px;
+        top: -120px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+
+    .iphone {
+
+        left: -51px;
+        top: -6px;
+    }
+
+
+    .macbook-2 {
+        top: -90px;
+        left: -48px;
+    }
+
+    .oval {
+
+        top: -67px;
+        left: 203px;
+    }
+
+    .pattern {
+
+        left: -12px;
+        top: -120px;
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+
+
+    .iphone {
+        width: 25%;
+        left: -51px;
+        top: 0px;
+    }
+
+
+    .macbook-2 {
+        width: 120%;
+        top: -90px;
+        left: -38px;
+    }
+
+    .oval {
+        width: 53%;
+        top: -99px;
+        left: 211px;
+    }
+
+    .pattern {
+
+        left: -12px;
+        top: -120px;
+    }
+
+}
+
+@media screen and (max-width:434px) {
+    .header {
+        height: 1434px;
+    }
+}

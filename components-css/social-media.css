@@ -1,0 +1,118 @@
+/* <========================SOCIAL-MEDIA========================> */
+
+.social-media-section {
+    /* padding-top: 50px; */
+    padding-bottom: 100px;
+}
+
+.social-top {
+    text-align: center;
+}
+
+.social-top h1 {
+    margin-top: 20px;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: 0.2px;
+}
+
+.social-bottom {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.social-media-card {
+    width: 263px;
+    height: 232px;
+    /* background-color: red; */
+    text-align: center;
+    margin-top: 60px;
+}
+
+.social-media-card img {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 30px;
+}
+
+.social-media-card h1 {
+    font-family: "Hanken Grotesk", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 12px;
+}
+
+.social-media-card p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    padding: 0 20px;
+    margin-bottom: 19px;
+}
+
+.follow-button {
+    display: inline-flex;
+    color: #1565D8;
+    cursor: pointer;
+}
+
+.follow-button p {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1;
+}
+
+.follow-button span img {
+    width: 13px;
+    height: 16px;
+}
+
+@media screen and (max-width: 1200px) {
+
+    .social-bottom {
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+        align-items: center;
+        /* background-color: green; */
+        gap: 10px;
+    }
+
+    .social-media-card {
+        width: 100%;
+        height: auto;
+        /* background-color: yellow; */
+    }
+
+    .social-media-card p {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0px;
+        text-align: center;
+    }
+
+    .social-media-card img {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 15px;
+
+    }
+
+    .follow-button p {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 1;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .social-bottom {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0px;
+    }
+}
+

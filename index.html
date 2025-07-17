@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>HTML CSS TASK</title>
+
+    <link href="style.css" rel="stylesheet" />
+    <link href="./components-css/challenge.css" rel="stylesheet" />
+    <link href="./components-css/footer.css" rel="stylesheet" />
+    <link href="./components-css/home.css" rel="stylesheet" />
+    <link href="./components-css/navbar.css" rel="stylesheet" />
+    <link href="./components-css/partner.css" rel="stylesheet" />
+    <link href="./components-css/project.css" rel="stylesheet" />
+    <link href="./components-css/social-media.css" rel="stylesheet" />
+    <link href="./components-css/testimonial.css" rel="stylesheet" />
+    <link href="./components-css/todo.css" rel="stylesheet" />
+  </head>
+  <body>
+    <main>
+      <header class="header">
+        <!--Navbar-->
+
+        <nav class="navbar mx-auto container">
+          <div class="logo">
+            <span class="logo-name">ehya</span>
+            <span class="logo-dot"></span>
+          </div>
+
+          <div class="nav-links" id="navLinks">
+            <ul class="nav-list">
+              <li>Home</li>
+              <li>
+                Landings
+                <span class="drop-down">
+                  <img src="./assets/angle-down.svg" alt="down" />
+                </span>
+
+                <div class="dropdown-content">
+                  <p>Home Page</p>
+                  <p>Product Page</p>
+                </div>
+              </li>
+              <li>
+                Pages
+                <span class="drop-down">
+                  <img src="./assets/angle-down.svg" alt="down" />
+                </span>
+
+                <div class="dropdown-content">
+                  <p>Admin Page</p>
+                  <p>Project Page</p>
+                </div>
+              </li>
+              <li>Docs</li>
+              <li>Help</li>
+            </ul>
+
+            <button class="btn">Get it now</button>
+          </div>
+          <img
+            src="./assets/hamburger-menu.svg"
+            alt="hamburger"
+            class="hamburger"
+            id="hamburgerBtn"
+          />
+        </nav>
+
+        <!--Home-->
+
+        <section class="home container">
+          <div class="home-section mx-auto">
+            <!--left-section-->
+
+            <div class="left-section">
+              <div class="home-content">
+                <h1 class="heading-content">
+                  Number #1,<br />
+                  Southern Asia <br />
+                  Digital Product Agency
+                </h1>
+
+                <p class="para-content">
+                  We bring the results while helping you achieve cost and time
+                  savings without taking on risk or management overhead.
+                </p>
+              </div>
+
+              <a href="#project">
+                <button class="portfolio-button">See Our Portfolio</button>
+              </a>
+
+              <a href="#todo">
+                <button class="round-button">
+                  <img src="./assets/down-arrow.svg" alt="arrow" />
+                </button>
+              </a>
+            </div>
+
+            <!-- RIGHT SECTION -->
+            <div class="right-section">
+              <!-- Only for desktop -->
+              <img
+                src="./assets/Macbook.png"
+                alt="Macbook"
+                class="macbook desktop-only"
+              />
+
+              <!-- For tablet/mobile -->
+              <img
+                src="./assets/Macbook-full.png"
+                alt="Macbook"
+                class="macbook-2 mobile-only"
+              />
+
+              <img src="./assets/iphone.png" alt="iPhone" class="iphone" />
+              <img src="./assets/Oval-1.svg" alt="Oval" class="oval" />
+              <img src="./assets/Pattern.svg" alt="Pattern" class="pattern" />
+            </div>
+          </div>
+        </section>
+      </header>
+
+      <!--Partner-->
+
+      <section class="partner container">
+        <div class="partner-section mx-auto margin-y">
+          <!--top-section-->
+
+          <div class="partner-top">
+            <p class="heading-top">our partner</p>
+
+            <div class="partner-content">
+              <!--left-section-->
+
+              <div class="partner-left">
+                <h1 class="heading-content">
+                  We’ve Worked with them, We Trust Each Other
+                </h1>
+              </div>
+
+              <!--right-section-->
+
+              <div class="partner-right">
+                <p class="para-content">
+                  Our team provides high-level creative education to a global
+                  audience of students, educators, and entrepreneurs all over
+                  the world
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!--bottom-section-->
+
+          <div class="partner-bottom">
+            <img src="./assets/Marquee/slack.svg" alt="slack" />
+            <img src="./assets/Marquee/netflix.svg" alt="netflix" />
+            <img src="./assets/Marquee/fitbit.svg" alt="fitbit" />
+            <img src="./assets/Marquee/google.svg" alt="google" />
+            <img src="./assets/Marquee/airbnb.svg" alt="airbnb" />
+          </div>
+        </div>
+      </section>
+
+      <!--What we do-->
+
+      <section class="todo container" id="todo">
+        <div class="todo-section mx-auto">
+          <!--TODO TOP SECTION-->
+
+          <div class="todo-top">
+            <h1 class="heading-content">What We do</h1>
+            <p class="para-content">
+              We work together with our client to execute impactful product.
+            </p>
+          </div>
+
+          <!--TODO BOTTOM SECTION-->
+
+          <div class="todo-bottom">
+            <div class="todo-card">
+              <div class="todo-left">
+                <img
+                  src="./assets/What%20we%20do/Branding-indentity.png"
+                  alt="branding-identity"
+                />
+              </div>
+
+              <div class="todo-right">
+                <h1 class="heading-content">Branding Identity</h1>
+                <p class="para-content">
+                  We make logo and concept for your brand needs.
+                </p>
+              </div>
+            </div>
+
+            <div class="todo-card">
+              <div class="todo-left">
+                <img
+                  src="./assets/What%20we%20do/development.png"
+                  alt="branding-identity"
+                />
+              </div>
+
+              <div class="todo-right">
+                <h1 class="heading-content">Development</h1>
+                <p class="para-content">
+                  We code your apps, website and dashboard to you.
+                </p>
+              </div>
+            </div>
+
+            <div class="todo-card">
+              <div class="todo-left">
+                <img
+                  src="./assets/What%20we%20do/UX%20design.png"
+                  alt="branding-identity"
+                />
+              </div>
+
+              <div class="todo-right">
+                <h1 class="heading-content">UI/UX Design</h1>
+                <p class="para-content">
+                  Making beautifull and intuitive design digital product.
+                </p>
+              </div>
+            </div>
+
+            <div class="todo-card">
+              <div class="todo-left">
+                <img
+                  src="./assets/What%20we%20do/Microstock.png"
+                  alt="branding-identity"
+                />
+              </div>
+
+              <div class="todo-right">
+                <h1 class="heading-content">Microstock</h1>
+                <p class="para-content">
+                  We produce million asset for your business needs.
+                </p>
+              </div>
+            </div>
+
+            <div class="todo-card">
+              <div class="todo-left">
+                <img
+                  src="./assets/What%20we%20do/Social%20media.png"
+                  alt="branding-identity"
+                />
+              </div>
+
+              <div class="todo-right">
+                <h1 class="heading-content">Social Media</h1>
+                <p class="para-content">
+                  Planning and maintenance social media for reach audience.
+                </p>
+              </div>
+            </div>
+
+            <div class="todo-card">
+              <div class="todo-left">
+                <img
+                  src="./assets/What%20we%20do/Research.png"
+                  alt="branding-identity"
+                />
+              </div>
+
+              <div class="todo-right">
+                <h1 class="heading-content">Research</h1>
+                <p class="para-content">
+                  Helping research startup or brand to business needs.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Projects-->
+
+      <section class="project container" id="project">
+        <div class="project-section mx-auto">
+          <!--top-section-->
+
+          <div class="project-top">
+            <p class="heading-top">portfolio</p>
+
+            <div class="project-content">
+              <!--left-section-->
+
+              <div class="project-left">
+                <h1 class="heading-content">Our Projects</h1>
+              </div>
+
+              <!--right-section-->
+
+              <div class="project-right">
+                <img src="./assets/projects/left-arrow.svg" alt="left-arrow" />
+                <img
+                  src="./assets/projects/right-arrow.svg"
+                  alt="right-arrow"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!--bottom-section-->
+
+          <div class="project-bottom">
+            <div class="project-image">
+              <div class="project-image-container">
+                <img
+                  src="./assets/projects/Website Project.png"
+                  alt="website-project"
+                />
+              </div>
+
+              <div class="project-image-content">
+                <p>Website, Landing</p>
+                <h1 class="heading-content">Website Project</h1>
+              </div>
+            </div>
+
+            <div class="project-image">
+              <div class="project-image-container">
+                <img
+                  src="./assets/projects/Dashboard project.png"
+                  alt="Dashboard project"
+                />
+              </div>
+
+              <div class="project-image-content">
+                <p>Dashboard, UI/UX Design</p>
+                <h1 class="heading-content">Dashboard Project</h1>
+              </div>
+            </div>
+
+            <div class="project-image">
+              <div class="project-image-container">
+                <img src="./assets/projects/Apps.png" alt="Apps" />
+              </div>
+
+              <div class="project-image-content">
+                <p>Apps, Mobile, iOs</p>
+                <h1 class="heading-content">Apps Project</h1>
+              </div>
+            </div>
+            <div class="project-image">
+              <div class="project-image-container">
+                <img
+                  src="./assets/projects/Website Project.png"
+                  alt="website-project"
+                />
+              </div>
+
+              <div class="project-image-content">
+                <p>Website, Landing</p>
+                <h1 class="heading-content">Website Project</h1>
+              </div>
+            </div>
+
+            <div class="project-image">
+              <div class="project-image-container">
+                <img
+                  src="./assets/projects/Dashboard project.png"
+                  alt="Dashboard project"
+                />
+              </div>
+
+              <div class="project-image-content">
+                <p>Dashboard, UI/UX Design</p>
+                <h1 class="heading-content">Dashboard Project</h1>
+              </div>
+            </div>
+
+            <div class="project-image">
+              <div class="project-image-container">
+                <img src="./assets/projects/Apps.png" alt="Apps" />
+              </div>
+
+              <div class="project-image-content">
+                <p>Apps, Mobile, iOs</p>
+                <h1 class="heading-content">Apps Project</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--TEstimonials-->
+      <section class="testimonial container">
+        <div class="testimonial-section mx-auto">
+          <!--TEstimonials-->
+
+          <div class="testimonial-top">
+            <p class="heading-top">testimonial</p>
+
+            <div class="testimonial-content">
+              <!--left-section-->
+
+              <div class="testimonial-left">
+                <h1 class="heading-content">What People Say about Us</h1>
+              </div>
+            </div>
+          </div>
+
+          <!--bottom-section-->
+
+          <div class="testimonial-bottom">
+            <div class="testimonial-card">
+              <div class="testimonial-image">
+                <img
+                  src="./assets/testimonials/Tetimonial-1.png"
+                  alt="testimonial"
+                />
+
+                <div class="testimonial-image-content">
+                  <h1 class="heading-content">Jaquon Hart</h1>
+                  <p class="para-content">VP Manager - Lizlle Company</p>
+                </div>
+              </div>
+
+              <div class="testimonial-card-content">
+                <p class="para-content">
+                  “Their UI/UX skills and experience, were key to identifying
+                  potential friction points within our Business Processes, which
+                  they fixed or streamlined beautifull”.
+                </p>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="testimonial-image">
+                <img
+                  src="./assets/testimonials/Testimonial-2.png"
+                  alt="testimonial"
+                />
+
+                <div class="testimonial-image-content">
+                  <h1 class="heading-content">Valdemar Forsberg</h1>
+                  <p class="para-content">Founder Digitac Finance</p>
+                </div>
+              </div>
+
+              <div class="testimonial-card-content">
+                <p class="para-content">
+                  Ehya pushed us to think beyond our initial scope and
+                  imagination while ensuring that the design and shape of the
+                  platform are continually adjusted based on data.
+                </p>
+              </div>
+            </div>
+
+            <button class="round-button testimonial-button">
+              <img src="./assets/projects/right-arrow.svg" alt="arrow" />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!--Social Media-->
+
+      <section class="social-media container" id="social-media">
+        <div class="social-media-section mx-auto">
+          <div class="social-top">
+            <p class="heading-top">our social media</p>
+            <h1 class="heading-content">Let’s be Friends</h1>
+          </div>
+
+          <div class="social-bottom">
+            <div class="social-media-card">
+              <img src="./assets/challenge/instagram.svg" alt="instagram" />
+              <h1 class="heading-content">Instagram</h1>
+              <p class="para-content">
+                For our Portfolio and Daily activities in office
+              </p>
+              <div class="follow-button">
+                <p>Follow Us</p>
+                <span>
+                  <img src="./assets/challenge/right.svg" alt="right-arrow" />
+                </span>
+              </div>
+            </div>
+
+            <div class="social-media-card">
+              <img src="./assets/challenge/twitter.svg" alt="twitter" />
+              <h1 class="heading-content">Twitter</h1>
+              <p class="para-content">For random thoughts and funny things</p>
+              <div class="follow-button">
+                <p>Follow Us</p>
+                <span>
+                  <img src="./assets/challenge/right.svg" alt="right-arrow" />
+                </span>
+              </div>
+            </div>
+
+            <div class="social-media-card">
+              <img src="./assets/challenge/Dribble.svg" alt="Dribble" />
+              <h1 class="heading-content">Dribbble</h1>
+              <p class="para-content">
+                For Updated & Detailed all of Our Portfolio
+              </p>
+              <div class="follow-button">
+                <p>Follow Us</p>
+                <span>
+                  <img src="./assets/challenge/right.svg" alt="right-arrow" />
+                </span>
+              </div>
+            </div>
+
+            <div class="social-media-card">
+              <img src="./assets/challenge/youtube.svg" alt="youtube" />
+              <h1 class="heading-content">Youtube</h1>
+              <p class="para-content">
+                For our video about tutorial and tips on design industry
+              </p>
+              <div class="follow-button">
+                <p>Subscribe</p>
+                <span>
+                  <img src="./assets/challenge/right.svg" alt="right-arrow" />
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Ready for challenge-->
+
+      <section class="challenge container">
+        <div class="challenge-section mx-auto">
+          <h1 class="heading-content">We’re Ready for a Challenging Project</h1>
+          <p>
+            Send us your brief and tell your project too. We are ready to help
+            all you need
+          </p>
+
+          <a href="#social-media">
+            <button>Let's Discuss it!</button>
+          </a>
+          <img src="./assets/Oval-2.svg" alt="oval" class="oval-2" />
+        </div>
+      </section>
+
+      <!--Footer-->
+
+      <footer class="footer container">
+        <div class="footer-section mx-auto">
+          <div class="footer-top">
+            <div class="footer-left">
+              <div class="footer-logo">
+                <span class="logo-name">ehya</span>
+                <span class="logo-dot"></span>
+              </div>
+              <p class="para-content">
+                Build a modern and creative website with crealand
+              </p>
+
+              <div class="footer-image">
+                <img src="./assets/footer/footer-google.svg" alt="google" />
+                <img src="./assets/footer/footer-twitter.svg" alt="twitter" />
+                <img
+                  src="./assets/footer/footer-instagram.svg"
+                  alt="instagram"
+                />
+                <img src="./assets/footer/footer-linkedin.svg" alt="linkedin" />
+                <img src="./assets/footer/footer-youtube.svg" alt="youtube" />
+              </div>
+            </div>
+
+            <div class="footer-right">
+              <div class="footer-list">
+                <ul>
+                  <p class="para-content">Product</p>
+                  <li>Landingpage</li>
+                  <li>Features</li>
+                  <li>Documentation</li>
+                  <li>Referral Program</li>
+                  <li>Pricing</li>
+                </ul>
+
+                <ul>
+                  <p class="para-content">Services</p>
+                  <li>Documentation</li>
+                  <li>Design</li>
+                  <li>Themes</li>
+                  <li>Illustrations</li>
+                  <li>UI Kit</li>
+                </ul>
+
+                <ul>
+                  <p class="para-content">Company</p>
+                  <li>About</li>
+                  <li>Terms</li>
+                  <li>Privacy Policy</li>
+                  <li>Careers</li>
+                </ul>
+
+                <ul>
+                  <p class="para-content">More</p>
+                  <li>Documentation</li>
+                  <li>License</li>
+                  <li>License</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <img src="./assets/footer/Heart.png" alt="heart" />
+            <p class="para-content">Copyright © 2019. Crafted with love.</p>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
+</html>
