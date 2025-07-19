@@ -16,7 +16,7 @@ body {
   h1 {
     font-size: 5rem;
     text-align: center;
-
+    margin: 20px 0;
   }
 }
 
@@ -74,15 +74,28 @@ body {
   border: 3px solid teal;
 }
 
-.contact{
+.contact {
   border: 3px solid yellowgreen;
 }
 
-.error{
+.error {
   max-width: 1200px;
   border: 3px solid rgba(255, 255, 0, 0.42);
   border-radius: 10px;
   margin: 50px auto;
   padding: 20px;
   text-align: center;
+}
+
+.backBtn {
+  background-color: rgba(255, 255, 0, 0.42);
+  border: none;
+  border-radius: 9px;
+  min-width: 100px;
+  padding: 10px 20px;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 20px;
+  cursor: pointer;
 }
