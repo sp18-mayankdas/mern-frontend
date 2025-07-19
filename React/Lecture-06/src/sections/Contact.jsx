@@ -1,0 +1,9 @@
+export default function Contact() {
+    return (
+        <div className="contact">
+            <h1>Contact</h1>
+            <h2>This is Contact Section</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse expedita quia provident corporis, at quo neque sunt doloribus voluptates. Aperiam vero a, maiores atque eligendi aliquid et exercitationem quasi quo voluptas! Cupiditate illum in iusto vero, illo voluptatum dignissimos sed perferendis quibusdam placeat cum deleniti nostrum corporis veniam dolorem unde non explicabo officiis pariatur iure blanditiis nesciunt assumenda impedit dolor! Corrupti consequatur, facere at fugit repellendus in mollitia delectus quas labore harum ab ex eligendi, excepturi nostrum non cum provident asperiores voluptates. Incidunt assumenda libero maxime cum facere accusantium perspiciatis placeat eligendi deleniti labore nobis amet aliquam architecto facilis, nemo nisi. Velit assumenda quae veniam ullam? Magnam veritatis laudantium excepturi vel in aliquid numquam cumque sapiente, amet mollitia nihil dicta, dolorem, animi nobis culpa veniam laborum laboriosam facilis? Amet sed unde assumenda eos, possimus soluta quam sequi adipisci aut eveniet molestias minus accusantium, aliquid facere optio tempore placeat magnam commodi ratione fugiat, aspernatur autem neque. Obcaecati dignissimos cum quis ipsum! At esse praesentium cumque. Veniam necessitatibus, mollitia minima doloremque dolor cupiditate. Repellat libero, maxime tempora aspernatur molestias in ad veniam? Dolor, itaque sequi excepturi, odit minus voluptas porro unde architecto, ipsum perspiciatis eius dicta. Labore facilis qui nam eos quaerat.</p>
+        </div>
+    )
+}

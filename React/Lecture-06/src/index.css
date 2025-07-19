@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1e1e1e;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: white;
+}
+
+.app {
+  padding: 40px;
+
+  h1 {
+    font-size: 5rem;
+    text-align: center;
+
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  border: 3px solid white;
+  padding: 5px 20px;
+  border-radius: 8px;
+}
+
+.logoImage {
+  width: 100px;
+}
+
+.navItems>ul {
+  display: flex;
+
+}
+
+.navItems>ul>li {
+  margin: 15px;
+  padding: 10px;
+  list-style-type: none;
+  cursor: pointer;
+
+}
+
+.navItems>ul>li>a {
+  color: white;
+  text-decoration: none;
+}
+
+
+
+.home,
+.about,
+.contact {
+  text-align: center;
+  margin: 30px auto;
+  padding: 30px 20px;
+  background-color: #242424ac;
+  border: 3px solid royalblue;
+  border-radius: 9px;
+  min-width: 300px;
+  max-width: 900px;
+  min-height: 500px;
+  max-height: 800px;
+}
+
+.about {
+  border: 3px solid teal;
+}
+
+.contact{
+  border: 3px solid yellowgreen;
+}
+
+.error{
+  max-width: 1200px;
+  border: 3px solid rgba(255, 255, 0, 0.42);
+  border-radius: 10px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+}
