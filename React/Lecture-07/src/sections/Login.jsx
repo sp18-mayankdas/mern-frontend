@@ -6,7 +6,7 @@ function Login() {
 
     const navigate = useNavigate();
 
-    const { isLoggedIn, setIsLoggedIn, login, logout } = useAuth();
+    const { isLoggedIn, login, logout } = useAuth();
 
     function submitHandler(e) {
         e.preventDefault()
