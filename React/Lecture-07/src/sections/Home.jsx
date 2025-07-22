@@ -5,18 +5,16 @@ function Home() {
 
     const navigate = useNavigate();
 
-    const { isLoggedIn , logout } = useAuth()
+    const { isLoggedIn, logout } = useAuth()
 
-    if(!isLoggedIn){
+    if (!isLoggedIn) {
         navigate("/")
     }
-    
+
 
     return (
         <div>Home
-            <button onClick={() => {
-
-            }}>Go to login page</button>
+            <button>Go to login page</button>
 
         </div>
     )
