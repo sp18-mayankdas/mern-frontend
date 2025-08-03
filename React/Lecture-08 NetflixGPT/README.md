@@ -1,5 +1,11 @@
 # Netflix GPT
 
+# Features Done
+- Components 
+- netflix loo and header
+- Header Component
+- Sign In/ Sign Up form
+
 # Features
 
 - Login/Sign Up
