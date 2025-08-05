@@ -2,9 +2,15 @@
 
 # Features Done
 - Components 
+- Configure Tailwind
+- Routing
 - netflix loo and header
 - Header Component
 - Sign In/ Sign Up form
+- Form validation
+- useRef hook
+- Firebase setup
+- Firebase authentication for Sign In/Sign Up
 
 # Features
 
