@@ -133,7 +133,7 @@ Formatting elements were designed to display special types of text:
 
 - Both gives visual output same, but bold tag is a physical tag & strong tag is a logical tag.Basically when bold tag is used, it only makes the words thicker... But when strong tag is used, it makes the word thicker & also tells the Browser that the text inside "strong" tag is important. & as per the tag the words inside the strong tags are loaded first & accurate.
 
-# Difference between <i> and <em> tag?
+# Difference between `<i>` and `<em>` tag?
 
 - The `<i>` tag in HTML is used to display text in italics. It is generally used for stylistic purposes, such as denoting a different mood, voice, or foreign word, without adding any semantic emphasis to the content.
 
@@ -218,7 +218,7 @@ HSLA COLOR: hsla(9, 100%, 64%, 0.5)
 
     - Need to have a  value to be pushed
     - adds a new element to an array at the end.
-    - And , returns the new array length.
+    - And, returns the new array length.
 
 # shift()
 
@@ -292,7 +292,7 @@ array.splice(3, 1, 80, "90", true);
   const obj1 = { name: "John", age: 30 };
   const obj2 = obj1;
   ```
-- In this case , we directly assigned obj1 to obj2, so both are pointing to same memory location.so eve if we will make any changes in obj2, it will also reflect in obj1.
+- In this case , we directly assigned obj1 to obj2, so both are pointing to same memory location.so even if we will make any changes in obj2, it will also reflect in obj1.
 
 - To access the prperties of an object, we can use either dot notation or bracket notation.
 - Dot notation: obj1.name
@@ -1258,3 +1258,4 @@ React can be used to manage a small portion of a webpage or the entire applicati
 - {}--> Inside these curly braces you can execute any piece of javscript code , you can console,log , you can call function , you can use variables , you can use react elements , you can use javascript variables, you can even call the functional components inside these curly braces coz functional components are also functions.
 - {} --> With the help of these curly braces you can even put react elements within other react elements , you can put react element into component , components into react elements , anything.
 - {}--> Also these curly braces do the data sanitization , so igt will protect your browser from malicious data .
+
