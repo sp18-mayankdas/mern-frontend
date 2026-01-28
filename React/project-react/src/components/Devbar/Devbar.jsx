@@ -352,13 +352,7 @@ const Devbar = () => {
     <div className='relative h-screen w-[700px] flex-col items-center overflow-auto bg-card'>
       <div className='flex flex-row items-center justify-between gap-4 p-4'>
         <div className='flex flex-row items-center gap-3'>
-          <img
-            src={getImageUrl(
-              theme === 'dark' ? '100w-logo.png' : '100w-logo-black.png',
-            )}
-            alt='logo'
-            className='h-[36px]'
-          />
+         
           <a
             className='text-lg leading-5'
             href={env.COSDEN_SOLUTIONS_URL + '/project-react'}
@@ -366,10 +360,6 @@ const Devbar = () => {
             rel='noreferrer'
           >
             <b>Project React</b>
-            <br />
-            <span className='text-sm text-muted-foreground'>
-              Made by <b>Cosden</b> Solutions
-            </span>
           </a>
         </div>
         <div className='flex flex-row items-center gap-4'>
